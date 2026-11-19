@@ -1,353 +1,663 @@
 from __future__ import annotations
 
-import csv
+import hashlib
 import io
+import json
+import re
+import unicodedata
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 import numpy as np
 import streamlit as st
-import tensorflow as tf
 from PIL import Image, ImageOps, UnidentifiedImageError
 
+try:
+    import tensorflow as tf
+except Exception:  # Chat and manual lookup can still work if TF is unavailable.
+    tf = None
+
 # ============================================================
-# ECOSORT AI – GIAO DIỆN NÂNG CẤP
-# Mô hình: MobileNetV2 fine-tuned (Model B)
+# ECOSORT AI | CHATBOX PHÂN LOẠI RÁC
+# Giữ Streamlit Community Cloud; không cần API trả phí.
 # ============================================================
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "data.json"
+GROUP_MODEL_CANDIDATES = [
+    BASE_DIR / "EcoSort_Model_B.keras",
+    BASE_DIR / "EcoSort_Model_B_Best.keras",
+]
+ITEM_MODEL_PATH = BASE_DIR / "EcoSort_Item_Model.keras"
+CONFIDENCE_THRESHOLD = 0.65
+MAX_IMAGE_BYTES = 5 * 1024 * 1024
+IMAGE_EXTENSIONS = {"jpg", "jpeg", "png", "webp"}
+GROUP_MODEL_CLASS_ORDER = ["huu_co", "rac_con_lai", "tai_che"]
 
 st.set_page_config(
-    page_title="EcoSort AI | Phân loại rác thông minh",
+    page_title="EcoSort AI | Trợ lý phân loại rác",
     page_icon="♻️",
-    layout="wide",
-    initial_sidebar_state="collapsed",
+    layout="centered",
+    initial_sidebar_state="expanded",
 )
 
-# Cấu hình dự đoán phải khớp thứ tự lớp lúc huấn luyện.
-TEN_NHAN = ["Rác hữu cơ", "Rác còn lại", "Rác tái chế"]
-KICH_THUOC_ANH = (224, 224)
-NGUONG_DIEM = 0.60
-NGUONG_KHOANG_CACH = 0.15
-DUONG_DAN_MODEL = Path(__file__).resolve().parent / "EcoSort_Model_B.keras"
 
-HUONG_DAN = {
-    "Rác hữu cơ": (
-        "Thu gom riêng phần thức ăn thừa, vỏ trái cây và rau củ. "
-        "Có thể xử lý theo quy trình ủ hữu cơ phù hợp tại địa phương."
-    ),
-    "Rác còn lại": (
-        "Kiểm tra vật liệu và hướng dẫn thu gom tại địa phương. "
-        "Không mặc định mọi vật dụng khó nhận diện đều thuộc nhóm này."
-    ),
-    "Rác tái chế": (
-        "Nếu vật liệu thuộc chương trình thu gom tại địa phương, hãy làm rỗng, "
-        "làm sạch khi phù hợp và để khô trước khi phân loại riêng."
-    ),
-}
+def load_knowledge() -> dict[str, Any]:
+    try:
+        with DATA_PATH.open("r", encoding="utf-8") as file:
+            data = json.load(file)
+        if not isinstance(data.get("materials"), dict):
+            raise ValueError("data.json thiếu mục materials hợp lệ")
+        return data
+    except Exception as exc:
+        st.error(f"Không đọc được data.json: {exc}")
+        st.stop()
 
-RAC_NGOAI_PHAM_VI = (
-    "EcoSort AI hiện chỉ phân loại ba nhóm rác thông thường. "
-    "Không dùng kết quả của mô hình để phân loại pin, ắc quy, bóng đèn, "
-    "thuốc, hóa chất, rác điện tử hoặc vật liệu không rõ thành phần. "
-    "Không tự xử lý vật liệu nguy hại; hãy để riêng và nhờ người lớn "
-    "hoặc đơn vị thu gom có trách nhiệm hướng dẫn."
-)
 
-# Giao diện: ưu tiên tương phản, khoảng trắng và điều hướng rõ ràng.
+KNOWLEDGE = load_knowledge()
+GROUPS = KNOWLEDGE.get("groups", {})
+MATERIALS = KNOWLEDGE.get("materials", {})
+
+
 st.markdown(
     """
     <style>
-      .block-container {max-width: 1180px; padding-top: 1.6rem; padding-bottom: 3rem;}
-      .eco-hero {padding: 1.5rem 1.7rem; border-radius: 18px;
-        background: linear-gradient(115deg, #e5f5eb 0%, #f4faf6 60%, #eaf4ef 100%);
-        border: 1px solid #cfe5d7; margin-bottom: 1.2rem;}
-      .eco-kicker {color:#167447; font-size:.82rem; font-weight:700; letter-spacing:.08em;}
-      .eco-hero h1 {color:#123b2a; margin:.25rem 0 .35rem 0; font-size:2.2rem;}
-      .eco-hero p {color:#315b46; margin:0; font-size:1.03rem;}
-      .eco-small {color:#5b7165; font-size:.88rem;}
-      div[data-testid="stMetric"] {background:#f4faf6; border:1px solid #dcebe1;
-        border-radius:14px; padding: .8rem 1rem;}
-      div.stButton > button[kind="primary"] {background:#16824e; border-color:#16824e;}
-      div.stButton > button[kind="primary"]:hover {background:#10683e; border-color:#10683e;}
-      .stAlert {border-radius:12px;}
-      h2, h3 {color:#183c2b;}
+      :root { color-scheme: light; }
+      .stApp { background: #f7faf8; }
+      .block-container { max-width: 920px; padding-top: 1.5rem; padding-bottom: 7rem; }
+      [data-testid="stSidebar"] { background: #eef6f0; }
+      .eco-header {display:flex;align-items:center;gap:14px;padding:16px 18px;
+        background:linear-gradient(120deg,#e4f3e8,#f7fbf8);border:1px solid #d4e9d9;
+        border-radius:20px;margin-bottom:14px;}
+      .eco-logo {width:48px;height:48px;border-radius:15px;background:#16824e;color:white;
+        display:flex;align-items:center;justify-content:center;font-size:25px;flex-shrink:0;}
+      .eco-title {font-size:1.55rem;font-weight:800;color:#17452d;line-height:1.15;}
+      .eco-subtitle {font-size:.9rem;color:#567362;margin-top:4px;}
+      .eco-tag {display:inline-block;padding:4px 10px;border-radius:999px;font-size:.78rem;
+        font-weight:700;margin:2px 0 8px 0;}
+      .eco-card-title {font-size:1.12rem;font-weight:800;color:#173b2a;margin:0 0 4px 0;}
+      .eco-muted {color:#61756a;font-size:.86rem;}
+      .eco-section {font-weight:750;color:#244a34;margin-top:10px;margin-bottom:3px;}
+      .eco-answer {background:#f2f8f3;border:1px solid #deebe1;border-radius:12px;
+        padding:10px 12px;margin:6px 0;}
+      div[data-testid="stChatMessage"] {border-radius:16px;}
+      div[data-testid="stChatInput"] {background:#fff;}
+      div.stButton > button[kind="primary"] {background:#16824e;border-color:#16824e;}
+      div.stButton > button[kind="primary"]:hover {background:#11673e;border-color:#11673e;}
+      @media (prefers-color-scheme: dark) {
+        .eco-header {background:#172d21;border-color:#31563e;}
+        .eco-title {color:#e5f4e9;}
+        .eco-subtitle,.eco-muted {color:#bfd4c5;}
+        .eco-card-title,.eco-section {color:#e2f0e6;}
+        .eco-answer {background:#1d3225;border-color:#385844;}
+      }
     </style>
     """,
     unsafe_allow_html=True,
 )
 
 
-@st.cache_resource(show_spinner="Đang tải mô hình EcoSort AI...")
-def tai_mo_hinh():
-    if not DUONG_DAN_MODEL.exists():
-        raise FileNotFoundError(
-            f"Không tìm thấy tệp mô hình: {DUONG_DAN_MODEL.name}. "
-            "Hãy kiểm tra tệp mô hình đã nằm cùng thư mục với app.py chưa."
+def init_state() -> None:
+    defaults = {
+        "messages": [],
+        "last_detection": None,
+        "classified_count": 0,
+        "estimated_mass_kg": 0.0,
+        "group_counts": {},
+        "processed_image_hashes": set(),
+        "last_camera_hash": None,
+    }
+    for key, value in defaults.items():
+        if key not in st.session_state:
+            st.session_state[key] = value
+    if not st.session_state.messages:
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": (
+                    "Xin chào! Mình là **EcoSort AI** 🌱\n\n"
+                    "Bạn có thể gửi ảnh ngay tại ô chat hoặc mở camera để chụp một vật thể. "
+                    "Mình sẽ giúp bạn tìm hiểu vật liệu, nhóm rác và cách xử lý phù hợp."
+                ),
+            }
         )
-    return tf.keras.models.load_model(DUONG_DAN_MODEL, compile=False)
 
 
-def chuan_bi_anh(du_lieu_anh: bytes) -> tuple[Image.Image, np.ndarray]:
-    """Đọc ảnh, chỉnh hướng EXIF, đổi RGB và resize bilinear giống lúc nạp dữ liệu."""
-    with Image.open(io.BytesIO(du_lieu_anh)) as anh_goc:
-        anh = ImageOps.exif_transpose(anh_goc).convert("RGB")
-    anh_da_doi_kich_thuoc = anh.resize(KICH_THUOC_ANH, Image.Resampling.BILINEAR)
-    mang = np.asarray(anh_da_doi_kich_thuoc, dtype=np.float32)
-    mang = np.expand_dims(mang, axis=0)
-    return anh, mang
+init_state()
 
 
-def du_doan(model, mang_anh: np.ndarray) -> dict:
-    dau_ra = np.asarray(model.predict(mang_anh, verbose=0))[0]
-    if dau_ra.ndim != 1 or len(dau_ra) != len(TEN_NHAN):
-        raise ValueError("Đầu ra mô hình không khớp với ba nhóm rác đã cấu hình.")
-    if not np.all(np.isfinite(dau_ra)):
-        raise ValueError("Mô hình trả về kết quả không hợp lệ.")
-    thu_tu = np.argsort(dau_ra)[::-1]
-    vi_tri_cao_nhat = int(thu_tu[0])
-    vi_tri_thu_hai = int(thu_tu[1])
-    diem_cao_nhat = float(dau_ra[vi_tri_cao_nhat])
-    diem_thu_hai = float(dau_ra[vi_tri_thu_hai])
+def normalize_text(value: str) -> str:
+    value = unicodedata.normalize("NFD", value.lower())
+    value = "".join(ch for ch in value if unicodedata.category(ch) != "Mn")
+    value = value.replace("đ", "d")
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def group_info(group_id: str) -> dict[str, str]:
+    return GROUPS.get(
+        group_id,
+        {
+            "display_name": "Chưa xác định",
+            "color": "#667085",
+            "description": "Chưa có thông tin cho nhóm rác này.",
+        },
+    )
+
+
+def find_material_from_text(text: str) -> tuple[str, dict[str, Any]] | None:
+    normalized = normalize_text(text)
+    matches: list[tuple[int, str, dict[str, Any]]] = []
+    for material_id, material in MATERIALS.items():
+        names = [material.get("display_name", ""), *material.get("aliases", [])]
+        for name in names:
+            candidate = normalize_text(str(name))
+            if candidate and candidate in normalized:
+                matches.append((len(candidate), material_id, material))
+    if not matches:
+        return None
+    _, material_id, material = max(matches, key=lambda item: item[0])
+    return material_id, material
+
+
+def resize_for_model(image: Image.Image, model: Any) -> np.ndarray:
+    input_shape = getattr(model, "input_shape", None)
+    if isinstance(input_shape, list):
+        input_shape = input_shape[0]
+    height = int(input_shape[1]) if input_shape and input_shape[1] else 224
+    width = int(input_shape[2]) if input_shape and input_shape[2] else 224
+    image = image.resize((width, height), Image.Resampling.BILINEAR)
+    array = np.asarray(image, dtype=np.float32)
+    return np.expand_dims(array, axis=0)
+
+
+@st.cache_resource(show_spinner="Đang tải mô hình nhận diện...")
+def load_models() -> tuple[Any | None, Any | None, str | None]:
+    if tf is None:
+        return None, None, "TensorFlow chưa được cài trong môi trường này."
+
+    item_model = None
+    group_model = None
+    warnings: list[str] = []
+
+    if ITEM_MODEL_PATH.exists():
+        try:
+            item_model = tf.keras.models.load_model(ITEM_MODEL_PATH, compile=False)
+            class_order = KNOWLEDGE.get("item_model_classes", [])
+            output_size = int(item_model.output_shape[-1])
+            if len(class_order) != output_size:
+                warnings.append(
+                    "Có EcoSort_Item_Model.keras nhưng item_model_classes trong data.json "
+                    "không khớp số đầu ra; ứng dụng sẽ bỏ qua model vật thể chi tiết."
+                )
+                item_model = None
+        except Exception as exc:
+            warnings.append(f"Không tải được mô hình vật thể chi tiết: {exc}")
+            item_model = None
+
+    for path in GROUP_MODEL_CANDIDATES:
+        if path.exists():
+            try:
+                candidate = tf.keras.models.load_model(path, compile=False)
+                if int(candidate.output_shape[-1]) == len(GROUP_MODEL_CLASS_ORDER):
+                    group_model = candidate
+                    break
+                warnings.append(f"Bỏ qua {path.name}: đầu ra không có 3 lớp như cấu hình Model B.")
+            except Exception as exc:
+                warnings.append(f"Không tải được {path.name}: {exc}")
+
+    if item_model is None and group_model is None:
+        warnings.append(
+            "Không tìm thấy model tương thích. Có thể chat bằng cách gõ tên vật liệu, "
+            "nhưng chưa thể nhận diện ảnh tự động."
+        )
+    return item_model, group_model, "\n".join(warnings) if warnings else None
+
+
+def predict_scores(model: Any, image: Image.Image) -> np.ndarray:
+    array = resize_for_model(image, model)
+    scores = np.asarray(model.predict(array, verbose=0))[0].astype(float)
+    if scores.ndim != 1 or not np.all(np.isfinite(scores)):
+        raise ValueError("Mô hình trả về điểm không hợp lệ.")
+    if np.any(scores < 0) or np.any(scores > 1.001):
+        # Model outputs are expected to be probabilities from a softmax head.
+        raise ValueError("Đầu ra mô hình không phải điểm Softmax trong khoảng 0–1.")
+    return scores
+
+
+def make_top3(scores: np.ndarray, labels: list[str]) -> list[dict[str, Any]]:
+    order = np.argsort(scores)[::-1][:3]
+    return [
+        {"label": labels[int(index)], "confidence": float(scores[int(index)])}
+        for index in order
+    ]
+
+
+def detect_image(image_bytes: bytes) -> dict[str, Any]:
+    if len(image_bytes) > MAX_IMAGE_BYTES:
+        raise ValueError("Ảnh vượt quá giới hạn 5 MB. Hãy chọn ảnh nhỏ hơn.")
+
+    try:
+        with Image.open(io.BytesIO(image_bytes)) as original:
+            image = ImageOps.exif_transpose(original).convert("RGB")
+    except (UnidentifiedImageError, OSError, ValueError) as exc:
+        raise ValueError("Không đọc được ảnh. Hãy gửi ảnh JPG, PNG hoặc WEBP hợp lệ.") from exc
+
+    item_model, group_model, _ = load_models()
+
+    # Ưu tiên mô hình nhiều lớp vật thể nếu nhóm đã huấn luyện và đặt đúng tên file.
+    if item_model is not None:
+        item_labels = KNOWLEDGE.get("item_model_classes", [])
+        item_scores = predict_scores(item_model, image)
+        top3 = make_top3(item_scores, item_labels)
+        best = top3[0]
+        confidence = float(best["confidence"])
+        material_id = str(best["label"])
+        material = MATERIALS.get(material_id)
+        if material is None:
+            return {
+                "display_name": "Vật thể chưa có hướng dẫn",
+                "material_id": material_id,
+                "group_id": "unknown",
+                "confidence": confidence,
+                "top3": top3,
+                "uncertain": True,
+                "source": "item_model",
+                "image": image,
+                "note": "Nhãn dự đoán chưa có mục tương ứng trong data.json.",
+            }
+        return {
+            "display_name": material["display_name"],
+            "material_id": material_id,
+            "group_id": material["group"],
+            "confidence": confidence,
+            "top3": top3,
+            "uncertain": confidence < CONFIDENCE_THRESHOLD,
+            "source": "item_model",
+            "image": image,
+        }
+
+    # Model B hiện tại chỉ có ba đầu ra nhóm rác, không thể suy ra tên vật thể cụ thể.
+    if group_model is None:
+        return {
+            "display_name": "Chưa thể nhận diện ảnh",
+            "material_id": None,
+            "group_id": "unknown",
+            "confidence": 0.0,
+            "top3": [],
+            "uncertain": True,
+            "source": "no_model",
+            "image": image,
+            "note": "Chưa có mô hình phù hợp trong repository.",
+        }
+
+    group_scores = predict_scores(group_model, image)
+    top3 = make_top3(group_scores, GROUP_MODEL_CLASS_ORDER)
+    best = top3[0]
+    group_id = str(best["label"])
+    group_map = {
+        "huu_co": "organic",
+        "rac_con_lai": "residual",
+        "tai_che": "recyclable",
+    }
+    mapped_group = group_map.get(group_id, "unknown")
+    confidence = float(best["confidence"])
     return {
-        "nhan": TEN_NHAN[vi_tri_cao_nhat],
-        "diem": diem_cao_nhat,
-        "nhan_2": TEN_NHAN[vi_tri_thu_hai],
-        "diem_2": diem_thu_hai,
-        "khoang_cach": diem_cao_nhat - diem_thu_hai,
-        "cac_diem": [float(x) for x in dau_ra],
+        "display_name": "Chưa xác định vật thể cụ thể",
+        "material_id": None,
+        "group_id": mapped_group,
+        "confidence": confidence,
+        "top3": [
+            {
+                "label": group_info(group_map.get(item["label"], "unknown"))["display_name"],
+                "confidence": item["confidence"],
+            }
+            for item in top3
+        ],
+        "uncertain": confidence < CONFIDENCE_THRESHOLD,
+        "source": "group_model",
+        "image": image,
+        "note": (
+            "Model B hiện chỉ được huấn luyện để dự đoán 3 nhóm rác, "
+            "chưa phân biệt chai nhựa, túi nilon hay từng loại vỏ trái cây."
+        ),
     }
 
 
-def tao_csv_phan_hoi(danh_sach: list[dict]) -> bytes:
-    buffer = io.StringIO()
-    cot = ["thoi_gian", "nhan_ai_du_doan", "diem_softmax", "nhan_nguoi_danh_gia", "ghi_chu"]
-    writer = csv.DictWriter(buffer, fieldnames=cot)
-    writer.writeheader()
-    writer.writerows(danh_sach)
-    return buffer.getvalue().encode("utf-8-sig")
+def update_impact(detection: dict[str, Any], image_hash: str) -> None:
+    if detection.get("uncertain"):
+        return
+    processed = st.session_state.processed_image_hashes
+    if image_hash in processed:
+        return
+    processed.add(image_hash)
+    st.session_state.classified_count += 1
+    group_id = detection.get("group_id", "unknown")
+    st.session_state.group_counts[group_id] = st.session_state.group_counts.get(group_id, 0) + 1
+    material = MATERIALS.get(detection.get("material_id") or "", {})
+    default_mass = float(KNOWLEDGE.get("impact", {}).get("default_item_mass_kg", 0.05))
+    mass = float(material.get("estimated_item_mass_kg", default_mass))
+    st.session_state.estimated_mass_kg += max(mass, 0.0)
 
 
-# Khởi tạo vùng nhớ phiên làm việc cho kết quả và phản hồi.
-if "ket_qua_hien_tai" not in st.session_state:
-    st.session_state.ket_qua_hien_tai = None
-if "phan_hoi" not in st.session_state:
-    st.session_state.phan_hoi = []
+def append_detection(image_bytes: bytes, filename: str, caption: str = "") -> dict[str, Any]:
+    image_hash = hashlib.sha256(image_bytes).hexdigest()
+    with st.spinner("EcoSort AI đang phân tích ảnh..."):
+        detection = detect_image(image_bytes)
+    detection["filename"] = filename
+    detection["timestamp"] = datetime.now().isoformat(timespec="seconds")
+    detection["image_hash"] = image_hash
+    detection["caption"] = caption
+    st.session_state.messages.append(
+        {"role": "user", "content": caption or "Mình gửi ảnh này để nhận diện.", "image_bytes": image_bytes}
+    )
+    st.session_state.messages.append(
+        {"role": "assistant", "content": "Kết quả phân tích ảnh:", "detection": detection}
+    )
+    st.session_state.last_detection = detection
+    update_impact(detection, image_hash)
+    return detection
 
-# Phần đầu trang
+
+def answer_question(question: str) -> str:
+    normalized = normalize_text(question)
+    found = find_material_from_text(question)
+    last = st.session_state.last_detection or {}
+
+    if found:
+        material_id, material = found
+        st.session_state.last_detection = {
+            "display_name": material["display_name"],
+            "material_id": material_id,
+            "group_id": material["group"],
+            "confidence": None,
+            "uncertain": False,
+            "source": "text_lookup",
+        }
+        return (
+            f"Theo tên vật liệu bạn vừa nhập, **{material['display_name']}** thuộc nhóm "
+            f"**{group_info(material['group'])['display_name']}**. "
+            "Mình đã ghi nhớ vật liệu này cho câu hỏi tiếp theo. Xem thẻ thông tin bên dưới nhé."
+        )
+
+    material_id = last.get("material_id")
+    material = MATERIALS.get(material_id or "")
+
+    if material is None:
+        if last.get("source") == "group_model":
+            return (
+                "Ảnh gần nhất mới được mô hình xếp vào một nhóm rác, chưa xác định được tên vật liệu cụ thể. "
+                "Bạn có thể gõ tên món đồ, ví dụ **chai nhựa**, **túi nilon** hoặc **vỏ cam**, "
+                "để mình tra hướng dẫn phù hợp."
+            )
+        return (
+            "Bạn hãy gửi ảnh hoặc gõ tên vật liệu cụ thể (ví dụ: chai nhựa, lon nhôm, vỏ cam). "
+            "Mình sẽ dựa vào danh mục hướng dẫn trong EcoSort AI để trả lời nhé."
+        )
+
+    faq = material.get("faq", {})
+    keyword_map = KNOWLEDGE.get("question_keywords", {})
+    matched_faq = None
+    for faq_key, keywords in keyword_map.items():
+        if any(normalize_text(keyword) in normalized for keyword in keywords):
+            matched_faq = faq_key
+            break
+
+    if matched_faq and matched_faq in faq:
+        return str(faq[matched_faq])
+
+    if any(term in normalized for term in ["tai che duoc khong", "co tai che", "tai che khong"]):
+        return str(faq.get("recycle", material.get("disposal_guide", "Hãy kiểm tra hướng dẫn tại địa phương.")))
+    if any(term in normalized for term in ["bo vao thung nao", "nhom rac nao", "phan loai vao dau"]):
+        return (
+            f"**{material['display_name']}** thuộc nhóm **{group_info(material['group'])['display_name']}**. "
+            f"{material.get('disposal_guide', '')}"
+        )
+    if any(term in normalized for term in ["tai su dung", "tan dung", "lam gi voi", "y tuong"]):
+        return str(material.get("reuse_tips", "Chưa có gợi ý tái sử dụng cụ thể."))
+    return (
+        f"Với **{material['display_name']}**, {material.get('short_explanation', '')} "
+        f"{material.get('disposal_guide', '')}"
+    ).strip()
+
+
+def render_detection_card(detection: dict[str, Any]) -> None:
+    group_id = detection.get("group_id", "unknown")
+    group = group_info(group_id)
+    material = MATERIALS.get(detection.get("material_id") or "", {})
+    color = group.get("color", "#667085")
+    display_name = detection.get("display_name", "Chưa xác định")
+    confidence = detection.get("confidence")
+    uncertain = bool(detection.get("uncertain"))
+
+    with st.container(border=True):
+        preview = detection.get("image")
+        if preview is not None:
+            preview_col, detail_col = st.columns([1, 2.8], gap="medium")
+            with preview_col:
+                st.image(preview, caption="Ảnh đã gửi", use_container_width=True)
+            with detail_col:
+                st.markdown(f'<div class="eco-card-title">{display_name}</div>', unsafe_allow_html=True)
+                st.markdown(
+                    f'<span class="eco-tag" style="background:{color}1A;color:{color};border:1px solid {color}55">'
+                    f'{group.get("display_name", "Chưa xác định")}</span>',
+                    unsafe_allow_html=True,
+                )
+                if confidence is not None:
+                    st.markdown(f"**Độ tin cậy của mô hình: {confidence * 100:.1f}%**")
+                    st.progress(min(max(float(confidence), 0.0), 1.0))
+                    st.caption("Điểm Softmax chỉ là mức độ ưu tiên của mô hình, không phải xác suất đã hiệu chuẩn.")
+                else:
+                    st.caption("Vật liệu được tra cứu từ tên bạn nhập, không phải dự đoán ảnh.")
+        else:
+            st.markdown(f'<div class="eco-card-title">{display_name}</div>', unsafe_allow_html=True)
+            st.markdown(
+                f'<span class="eco-tag" style="background:{color}1A;color:{color};border:1px solid {color}55">'
+                f'{group.get("display_name", "Chưa xác định")}</span>',
+                unsafe_allow_html=True,
+            )
+            if confidence is not None:
+                st.markdown(f"**Độ tin cậy của mô hình: {confidence * 100:.1f}%**")
+                st.progress(min(max(float(confidence), 0.0), 1.0))
+                st.caption("Điểm Softmax chỉ là mức độ ưu tiên của mô hình, không phải xác suất đã hiệu chuẩn.")
+            else:
+                st.caption("Vật liệu được tra cứu từ tên bạn nhập, không phải dự đoán ảnh.")
+
+        if uncertain:
+            st.warning(
+                "Mình chưa nhận diện rõ vật thể (độ tin cậy dưới 65%). "
+                "Bạn thử chụp gần hơn, đủ sáng, chỉ lấy một vật thể; hoặc gõ tên món đồ nhé."
+            )
+            if detection.get("top3"):
+                st.markdown("**Ba kết quả mô hình đang cân nhắc:**")
+                for candidate in detection["top3"]:
+                    st.write(f"• {candidate['label']}: {candidate['confidence'] * 100:.1f}%")
+        elif detection.get("source") == "group_model":
+            st.info(
+                detection.get(
+                    "note",
+                    "Mô hình hiện nhận diện nhóm rác, chưa xác định tên vật thể cụ thể.",
+                )
+            )
+        else:
+            guide = material if material else group
+            st.markdown('<div class="eco-section">Cách xử lý</div>', unsafe_allow_html=True)
+            st.write(guide.get("disposal_guide", "Hãy kiểm tra quy định thu gom tại địa phương."))
+            st.markdown('<div class="eco-section">Tại sao cần xử lý như vậy?</div>', unsafe_allow_html=True)
+            st.write(guide.get("why", group.get("description", "Phân loại đúng giúp quản lý rác phù hợp hơn.")))
+            st.markdown('<div class="eco-section">Gợi ý tái sử dụng</div>', unsafe_allow_html=True)
+            st.write(guide.get("reuse_tips", "Ưu tiên tái sử dụng an toàn nếu vật liệu còn phù hợp."))
+            collection = guide.get("collection_points")
+            if collection:
+                st.markdown('<div class="eco-section">Gợi ý điểm thu gom</div>', unsafe_allow_html=True)
+                st.write(collection)
+                st.caption("Đây là gợi ý loại điểm thu gom; hãy kiểm tra địa chỉ và lịch nhận tại địa phương.")
+
+        if detection.get("note") and detection.get("source") != "group_model":
+            st.caption(detection["note"])
+
+
+def render_message(message: dict[str, Any], index: int) -> None:
+    role = message.get("role", "assistant")
+    with st.chat_message(role, avatar="🧑" if role == "user" else "♻️"):
+        if message.get("content"):
+            st.markdown(message["content"])
+        if message.get("image_bytes"):
+            st.image(message["image_bytes"], use_container_width=True)
+        if message.get("detection"):
+            render_detection_card(message["detection"])
+            quick_replies = message["detection"].get("quick_replies", [])
+            if not quick_replies:
+                material = MATERIALS.get(message["detection"].get("material_id") or "", {})
+                fallback_group = group_info(message["detection"].get("group_id", "unknown"))
+                quick_replies = material.get("quick_replies", fallback_group.get("quick_replies", []))
+            if index == len(st.session_state.messages) - 1 and quick_replies:
+                st.caption("Bạn có thể hỏi nhanh:")
+                cols = st.columns(min(3, len(quick_replies)))
+                for idx, label in enumerate(quick_replies[:3]):
+                    with cols[idx]:
+                        if st.button(label, key=f"quick_{index}_{idx}", use_container_width=True):
+                            st.session_state.pending_question = label
+                            st.rerun()
+
+
+def add_text_exchange(question: str) -> None:
+    st.session_state.messages.append({"role": "user", "content": question})
+    found = find_material_from_text(question)
+    if found:
+        material_id, material = found
+        detection = {
+            "display_name": material["display_name"],
+            "material_id": material_id,
+            "group_id": material["group"],
+            "confidence": None,
+            "uncertain": False,
+            "source": "text_lookup",
+            "quick_replies": material.get("quick_replies", []),
+        }
+        st.session_state.last_detection = detection
+        text_hash = hashlib.sha256(
+            f"text:{material_id}:{len(st.session_state.messages)}".encode("utf-8")
+        ).hexdigest()
+        update_impact(detection, text_hash)
+        st.session_state.messages.append(
+            {"role": "assistant", "content": "Mình tìm thấy vật liệu trong danh mục hướng dẫn:", "detection": detection}
+        )
+    else:
+        reply = answer_question(question)
+        st.session_state.messages.append({"role": "assistant", "content": reply})
+
+
+def process_image_upload(uploaded_file: Any, caption: str = "") -> None:
+    image_bytes = uploaded_file.getvalue()
+    if len(image_bytes) > MAX_IMAGE_BYTES:
+        st.session_state.messages.append({"role": "user", "content": caption or "Mình đã gửi một ảnh."})
+        st.session_state.messages.append(
+            {"role": "assistant", "content": "Ảnh vượt quá giới hạn 5 MB. Hãy chọn ảnh nhỏ hơn nhé."}
+        )
+        return
+    try:
+        append_detection(image_bytes, getattr(uploaded_file, "name", "anh_camera.jpg"), caption)
+    except Exception as exc:
+        st.session_state.messages.append({"role": "assistant", "content": f"Mình chưa xử lý được ảnh: {exc}"})
+
+
+# Sidebar: Eco-Impact Tracker (số liệu ước tính vui, không phải đo lường thực tế).
+with st.sidebar:
+    st.markdown("## 🌱 Eco-Impact Tracker")
+    st.metric("Vật thể đã phân loại trong phiên", st.session_state.classified_count)
+    st.metric("Khối lượng phân loại ước tính", f"{st.session_state.estimated_mass_kg:.2f} kg")
+    st.caption(
+        "Ước tính minh họa: khối lượng trung bình giả định theo từng vật liệu. "
+        "Không phải lượng rác thực tế đã giảm hay số liệu đo phát thải CO₂."
+    )
+    if st.session_state.group_counts:
+        st.markdown("**Theo nhóm rác**")
+        for group_id, count in st.session_state.group_counts.items():
+            st.write(f"{group_info(group_id)['display_name']}: **{count}**")
+    st.divider()
+    st.markdown("**Mẹo sử dụng**")
+    st.caption("Chụp một vật thể mỗi ảnh, đủ sáng và không bị che khuất.")
+    if st.button("🧹 Xóa cuộc trò chuyện", use_container_width=True):
+        for key in ["messages", "last_detection", "classified_count", "estimated_mass_kg", "group_counts", "processed_image_hashes", "last_camera_hash", "pending_question"]:
+            st.session_state.pop(key, None)
+        st.rerun()
+
+# Header
 st.markdown(
     """
-    <div class="eco-hero">
-      <div class="eco-kicker">DỰ ÁN TIN HỌC 10 · TRÍ TUỆ NHÂN TẠO VÌ MÔI TRƯỜNG</div>
-      <h1>♻️ EcoSort AI</h1>
-      <p>Trợ lý gợi ý nhận diện và phân loại rác từ hình ảnh</p>
+    <div class="eco-header">
+      <div class="eco-logo">♻️</div>
+      <div>
+        <div class="eco-title">EcoSort AI</div>
+        <div class="eco-subtitle">Trò chuyện với trợ lý phân loại rác thông minh</div>
+      </div>
     </div>
     """,
     unsafe_allow_html=True,
 )
+st.caption("Gửi ảnh để nhận diện hoặc nhập tên vật liệu để hỏi cách phân loại, xử lý và tái sử dụng.")
 
-st.info(
-    "EcoSort AI là mô hình thử nghiệm, chỉ hỗ trợ ba nhóm rác thông thường. "
-    "Kết quả là gợi ý từ AI, không thay thế việc kiểm tra vật liệu và quy định thu gom tại địa phương."
+# Show model status without blocking manual chat.
+item_model, group_model, model_warning = load_models()
+if model_warning:
+    st.warning(model_warning)
+
+# Process quick reply selected from an earlier render.
+pending_question = st.session_state.pop("pending_question", None)
+if pending_question:
+    add_text_exchange(pending_question)
+
+# Render conversation history.
+for message_index, message in enumerate(st.session_state.messages):
+    render_message(message, message_index)
+
+# Camera is immediately adjacent to the chat composer. Upload is built into st.chat_input.
+with st.popover("📷 Chụp ảnh bằng camera", use_container_width=True):
+    camera_file = st.camera_input(
+        "Đưa một vật thể vào giữa khung hình rồi chụp",
+        key="ecosort_camera_capture",
+    )
+    st.caption("Nếu không muốn cấp quyền camera, bạn vẫn có thể đính kèm ảnh ở thanh chat bên dưới.")
+
+if camera_file is not None:
+    camera_bytes = camera_file.getvalue()
+    camera_hash = hashlib.sha256(camera_bytes).hexdigest()
+    if camera_hash != st.session_state.last_camera_hash:
+        st.session_state.last_camera_hash = camera_hash
+        try:
+            process_image_upload(camera_file, "Ảnh chụp từ camera")
+        except Exception as exc:
+            st.session_state.messages.append({"role": "assistant", "content": f"Không xử lý được ảnh camera: {exc}"})
+        st.rerun()
+
+submission = st.chat_input(
+    "Nhập câu hỏi hoặc đính kèm ảnh rác...",
+    accept_file=True,
+    file_type=["jpg", "jpeg", "png", "webp"],
+    max_upload_size=5,
+    key="ecosort_chat_input",
 )
 
-try:
-    mo_hinh = tai_mo_hinh()
-except Exception as loi:
-    st.error(f"Không thể tải mô hình AI: {loi}")
-    st.stop()
+if submission is not None:
+    text = str(getattr(submission, "text", "") or "").strip()
+    files = list(getattr(submission, "files", []) or [])
+    if text and not files:
+        add_text_exchange(text)
+        st.rerun()
+    elif files:
+        for uploaded in files:
+            process_image_upload(uploaded, text)
+        if text:
+            # process_image_upload stores the text once beside the attached image;
+            # answer it against the new detection context without duplicating the user bubble.
+            st.session_state.messages.append({"role": "assistant", "content": answer_question(text)})
+        st.rerun()
 
-trang_phan_loai, trang_huong_dan, trang_gioi_thieu = st.tabs(
-    ["🔎 Phân loại rác", "📗 Hướng dẫn phân loại", "ℹ️ Về dự án"]
-)
-
-with trang_phan_loai:
-    st.subheader("1. Cung cấp hình ảnh")
-    cot_tai, cot_camera = st.columns(2, gap="large")
-    with cot_tai:
-        tep_tai_len = st.file_uploader(
-            "Tải ảnh từ thiết bị",
-            type=["jpg", "jpeg", "png", "webp"],
-            max_upload_size=10,
-            help="Nên dùng ảnh rõ, đủ sáng và tập trung vào một vật thể. Giới hạn 10 MB/ảnh.",
-        )
-    with cot_camera:
-        tep_camera = st.camera_input(
-            "Chụp ảnh bằng camera",
-            help="Trình duyệt cần được cấp quyền sử dụng camera.",
-        )
-
-    tep_duoc_chon = tep_tai_len if tep_tai_len is not None else tep_camera
-    anh_hien_thi = None
-    mang_anh = None
-    if tep_duoc_chon is not None:
-        try:
-            anh_hien_thi, mang_anh = chuan_bi_anh(tep_duoc_chon.getvalue())
-            st.image(anh_hien_thi, caption="Ảnh đầu vào", width=360)
-        except (UnidentifiedImageError, OSError, ValueError) as loi:
-            st.error(f"Không đọc được ảnh. Hãy chọn tệp JPG, PNG hoặc WEBP hợp lệ. Chi tiết: {loi}")
-
-    st.subheader("2. Kiểm tra phạm vi ảnh")
-    cot_nguy_hai, cot_hon_hop = st.columns(2)
-    with cot_nguy_hai:
-        co_rac_nguy_hai = st.checkbox(
-            "Ảnh có pin, ắc quy, bóng đèn, thuốc, hóa chất hoặc rác điện tử?"
-        )
-    with cot_hon_hop:
-        anh_hon_hop = st.checkbox(
-            "Ảnh có nhiều loại rác trộn lẫn hoặc nhiều vật thể?"
-        )
-
-    if co_rac_nguy_hai:
-        st.warning(RAC_NGOAI_PHAM_VI)
-    elif anh_hon_hop:
-        st.warning(
-            "Ảnh nhiều loại rác nằm ngoài tình huống mô hình được thiết kế để xử lý. "
-            "Hãy chụp từng vật thể riêng biệt; không nên dùng một nhãn duy nhất cho cả đống rác."
-        )
-
-    st.caption(
-        "Mẹo chụp ảnh: đặt một vật thể ở giữa khung hình, đủ sáng, không che khuất; "
-        "tránh ảnh chụp quá xa, ảnh ghép hoặc ảnh có nhiều đồ vật."
-    )
-
-    nut_bi_vo_hieu = tep_duoc_chon is None or mang_anh is None or co_rac_nguy_hai or anh_hon_hop
-    if st.button("🔍 PHÂN LOẠI RÁC", type="primary", use_container_width=True, disabled=nut_bi_vo_hieu):
-        try:
-            with st.spinner("EcoSort AI đang phân tích hình ảnh..."):
-                ket_qua = du_doan(mo_hinh, mang_anh)
-                ket_qua["ten_tep"] = getattr(tep_duoc_chon, "name", "Ảnh chụp camera")
-                ket_qua["thoi_gian"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                st.session_state.ket_qua_hien_tai = ket_qua
-        except Exception as loi:
-            st.error(f"Không thể phân loại ảnh: {loi}")
-            st.session_state.ket_qua_hien_tai = None
-
-    ket_qua = st.session_state.ket_qua_hien_tai
-    if ket_qua is not None:
-        st.divider()
-        st.subheader("3. Kết quả nhận diện")
-        diem = ket_qua["diem"]
-        khoang_cach = ket_qua["khoang_cach"]
-        if diem < NGUONG_DIEM or khoang_cach < NGUONG_KHOANG_CACH:
-            st.warning(
-                f"Kết quả chưa đủ rõ. AI đang nghiêng về **{ket_qua['nhan']}**, "
-                f"nhưng nhóm đứng thứ hai là **{ket_qua['nhan_2']}**. "
-                "Hãy kiểm tra thủ công hoặc chụp lại ảnh."
-            )
-        else:
-            st.success(f"AI gợi ý: **{ket_qua['nhan']}**")
-
-        c1, c2 = st.columns(2)
-        with c1:
-            st.metric("Nhóm AI dự đoán", ket_qua["nhan"])
-        with c2:
-            st.metric("Điểm đầu ra Softmax", f"{diem * 100:.2f}%")
-
-        st.caption(
-            "Điểm Softmax thể hiện mức độ ưu tiên giữa ba nhãn của mô hình; "
-            "đây không phải xác suất đã được hiệu chuẩn và không bảo đảm dự đoán đúng."
-        )
-
-        st.markdown("**So sánh điểm của ba nhóm**")
-        bang_diem = sorted(
-            zip(TEN_NHAN, ket_qua["cac_diem"]),
-            key=lambda x: x[1],
-            reverse=True,
-        )
-        for ten_nhan, gia_tri in bang_diem:
-            st.write(f"**{ten_nhan}:** {gia_tri * 100:.2f}%")
-            st.progress(min(max(gia_tri, 0.0), 1.0))
-
-        st.markdown("**Hướng dẫn xử lý tham khảo**")
-        st.write(HUONG_DAN[ket_qua["nhan"]])
-        st.warning(
-            "Nếu vật liệu bị bẩn, là đồ vật nhiều lớp hoặc không rõ thành phần, "
-            "hãy kiểm tra hướng dẫn thu gom tại địa phương."
-        )
-
-        with st.expander("Gửi phản hồi để con người kiểm tra kết quả"):
-            st.write(
-                "Phản hồi chỉ được lưu trong phiên sử dụng hiện tại để tải xuống. "
-                "Ứng dụng không tự động dùng phản hồi để huấn luyện lại mô hình. "
-                "Nhãn người dùng chọn cần được kiểm tra trước khi trở thành dữ liệu huấn luyện."
-            )
-            with st.form("phan_hoi_form", clear_on_submit=True):
-                nhan_nguoi_dung = st.selectbox(
-                    "Theo bạn, nhãn phù hợp hơn là:",
-                    TEN_NHAN + ["Không thuộc 3 nhóm / chưa thể xác định"],
-                )
-                ghi_chu = st.text_area(
-                    "Ghi chú (không bắt buộc)",
-                    placeholder="Ví dụ: ảnh chụp một phần chai nhựa; vật liệu bị trộn...",
-                    max_chars=300,
-                )
-                gui_phan_hoi = st.form_submit_button("Ghi nhận phản hồi")
-            if gui_phan_hoi:
-                st.session_state.phan_hoi.append({
-                    "thoi_gian": datetime.now().isoformat(timespec="seconds"),
-                    "nhan_ai_du_doan": ket_qua["nhan"],
-                    "diem_softmax": round(diem, 6),
-                    "nhan_nguoi_danh_gia": nhan_nguoi_dung,
-                    "ghi_chu": ghi_chu,
-                })
-                st.success("Đã ghi nhận phản hồi trong phiên hiện tại.")
-
-    if st.session_state.phan_hoi:
-        with st.expander(f"Phản hồi đã ghi nhận trong phiên này ({len(st.session_state.phan_hoi)})"):
-            st.dataframe(st.session_state.phan_hoi, use_container_width=True)
-            st.download_button(
-                "Tải bảng phản hồi dạng CSV",
-                data=tao_csv_phan_hoi(st.session_state.phan_hoi),
-                file_name="EcoSort_AI_Phan_hoi_nguoi_dung.csv",
-                mime="text/csv",
-            )
-
-with trang_huong_dan:
-    st.subheader("Hướng dẫn phân loại theo quy ước của EcoSort AI")
-    st.write(
-        "Ba nhóm dưới đây là quy ước phục vụ mô hình thử nghiệm. "
-        "Khả năng thu gom và tái chế thực tế còn phụ thuộc vật liệu, tình trạng rác "
-        "và quy định của địa phương."
-    )
-    for ten, mo_ta in HUONG_DAN.items():
-        with st.container(border=True):
-            st.markdown(f"### {ten}")
-            st.write(mo_ta)
-    st.error(RAC_NGOAI_PHAM_VI)
-    st.markdown("**Để kết quả ổn định hơn:**")
-    st.markdown(
-        "- Chụp từng vật thể riêng biệt, không chụp cả đống rác.\n"
-        "- Đặt vật thể ở giữa ảnh, đủ sáng và không bị che khuất.\n"
-        "- Không dùng ảnh ghép, ảnh quảng cáo hoặc hình minh họa.\n"
-        "- Với rác hỗn hợp hoặc vật liệu không rõ thành phần, ưu tiên kiểm tra thủ công."
-    )
-
-with trang_gioi_thieu:
-    st.subheader("Thông tin dự án")
-    st.write(
-        "EcoSort AI là sản phẩm thử nghiệm của dự án Tin học 10, "
-        "sử dụng MobileNetV2 và học chuyển giao để gợi ý phân loại ảnh rác."
-    )
-    m1, m2, m3 = st.columns(3)
-    m1.metric("Kiến trúc", "MobileNetV2")
-    m2.metric("Số nhóm", "3")
-    m3.metric("Phiên bản", "Model B")
-    st.markdown("**Kết quả đánh giá đã ghi nhận**")
-    st.write(
-        "Model B đạt Accuracy 92,64% trên tập xác thực 3.385 ảnh. "
-        "Trong lần kiểm thử độc lập ban đầu trên 2.910 ảnh, Accuracy đạt 79,97%. "
-        "Kết quả cho thấy mô hình còn hạn chế khi gặp ảnh có phân bố khác dữ liệu huấn luyện, "
-        "đặc biệt ở nhóm rác tái chế."
-    )
-    st.caption(
-        "Không diễn giải điểm Softmax của một ảnh thành độ chính xác thực tế. "
-        "Mô hình hiện chưa được xác nhận cho rác nguy hại, rác hỗn hợp hoặc mọi điều kiện ngoài đời."
-    )
-    st.markdown("**Bảo vệ dữ liệu:** Ứng dụng không lưu ảnh tải lên thành bộ sưu tập. Tránh tải ảnh có khuôn mặt, biển số, giấy tờ hoặc thông tin cá nhân; tệp phản hồi chỉ chứa nhãn và ghi chú do người dùng nhập, không chứa ảnh hay thông tin định danh.")
-    st.markdown("**Thành viên thực hiện:** Tràn Bảo Minh và Phạm Gia Bách")
-    st.markdown("**Nguồn và giới hạn dữ liệu:** Phiên bản mô hình hiện tại được huấn luyện bằng bộ dữ liệu công khai. Nhóm cần bổ sung và ghi nhận riêng ảnh tự chụp trước khi tuyên bố đã đáp ứng yêu cầu dữ liệu tự thu thập trong tiêu chí Mức 4.")
-
-st.divider()
-st.caption(
-    "EcoSort AI · Dự án Tin học 10 · Tràn Bảo Minh – Phạm Gia Bách | "
-    "AI đưa ra gợi ý; người dùng chịu trách nhiệm kiểm tra trước khi phân loại."
+st.markdown(
+    '<div class="eco-muted" style="text-align:center;margin-top:18px">'
+    'EcoSort AI chỉ đưa ra gợi ý. Với pin, rác điện tử, hóa chất hoặc vật liệu không rõ thành phần, '
+    'hãy để riêng và nhờ người lớn/đơn vị thu gom phù hợp hướng dẫn.'
+    '</div>',
+    unsafe_allow_html=True,
 )
