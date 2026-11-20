@@ -1,39 +1,21 @@
 {
   "classes": [
     {
-      "id": "cardboard",
-      "name": "Bìa carton",
-      "bin": "Thùng rác Tái chế (Xanh dương)",
-      "guide": "Làm phẳng thùng carton, giữ khô ráo và loại bỏ băng keo trước khi bỏ vào thùng tái chế."
+      "id": "organic",
+      "name": "Rác hữu cơ / Thực phẩm",
+      "bin": "Thùng rác Hữu cơ (Xanh lá)",
+      "guide": "Tách riêng thức ăn thừa, vỏ trái cây, rau củ để ủ phân compost hoặc bỏ vào thùng rác hữu cơ."
     },
     {
-      "id": "glass",
-      "name": "Thủy tinh",
+      "id": "recyclable",
+      "name": "Rác tái chế (Nhựa, Giấy, Kim loại)",
       "bin": "Thùng rác Tái chế (Xanh dương)",
-      "guide": "Rửa sạch chai lọ thủy tinh, tháo nắp kim loại/nhựa riêng và tránh làm vỡ."
+      "guide": "Làm sạch sơ, bóp dẹt chai lọ hoặc gấp gọn bìa giấy trước khi bỏ vào thùng tái chế."
     },
     {
-      "id": "metal",
-      "name": "Kim loại / Lon nhôm",
-      "bin": "Thùng rác Tái chế (Xanh dương)",
-      "guide": "Đổ hết chất lỏng bên trong, tráng sơ và bóp dẹt lon để tiết kiệm diện tích."
-    },
-    {
-      "id": "paper",
-      "name": "Giấy",
-      "bin": "Thùng rác Tái chế (Xanh dương)",
-      "guide": "Gom gọn giấy sạch, không dính dầu mỡ hay thức ăn thừa."
-    },
-    {
-      "id": "plastic",
-      "name": "Nhựa",
-      "bin": "Thùng rác Tái chế (Xanh dương)",
-      "guide": "Rửa sạch chai/hộp nhựa, bóp dẹt và tháo nhãn nếu có thể."
-    },
-    {
-      "id": "trash",
-      "name": "Rác thải khác / Khó tái chế",
-      "bin": "Thùng rác Sinh hoạt (Xám / Xanh lá)",
+      "id": "non_recyclable",
+      "name": "Rác vô cơ / Khó tái chế",
+      "bin": "Thùng rác Sinh hoạt (Xám / Cam)",
       "guide": "Bỏ vào thùng rác thông thường, bọc kín nếu có mùi hoặc dễ rò rỉ."
     }
   ]
