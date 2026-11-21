@@ -1,0 +1,1312 @@
+{
+  "aerosol_cans": {
+    "name": "Bình xịt dạng aerosol",
+    "english_name": "Aerosol can",
+    "group_name": "Rác nguy hại",
+    "what_it_is": "Bình aerosol là hộp kín dùng khí đẩy để phun sản phẩm như khử mùi, sơn, chất vệ sinh hoặc kem xịt. Đây không giống lon đồ uống vì bên trong có thể còn khí nén và phần sản phẩm dư.",
+    "common_materials": "Thường là vỏ thép hoặc nhôm, van phun, ống dẫn và phần khí đẩy/sản phẩm còn lại.",
+    "why_group": "Bình còn áp suất hoặc còn hóa chất không nên bị ép, đục hay đưa vào dòng kim loại tái chế thông thường. Khi đã rỗng hoàn toàn, một số nơi có thể tiếp nhận như kim loại nhưng phải theo quy định địa phương.",
+    "preparation_steps": [
+      "Đọc nhãn sản phẩm để xác định loại bình và cảnh báo của nhà sản xuất.",
+      "Không cố xịt hết sản phẩm trong nhà hoặc ở nơi không thông thoáng chỉ để làm rỗng bình."
+    ],
+    "disposal_steps": [
+      "Nếu còn sản phẩm hoặc không chắc bình đã rỗng, giữ nguyên và hỏi điểm thu gom chất thải nguy hại hoặc chương trình thu hồi phù hợp.",
+      "Chỉ chuyển sang dòng kim loại khi hướng dẫn địa phương xác nhận bình rỗng được tiếp nhận."
+    ],
+    "reuse_options": [
+      "Không tái sử dụng bình để chứa chất khác hoặc tự chế thành vật dụng."
+    ],
+    "safety_notes": [
+      "Không đốt, đập, chọc thủng, nghiền hoặc làm nóng bình.",
+      "Tránh để gần lửa, nguồn nhiệt và ánh nắng nóng.",
+      "Nếu bình rò rỉ, tránh hít hơi và nhờ người lớn/đơn vị chuyên trách xử lý."
+    ],
+    "local_variation": "Quy định với bình aerosol khác nhau tùy địa phương và loại sản phẩm; cần xác nhận với điểm thu gom trước khi bỏ.",
+    "keywords": [
+      "bình xịt",
+      "bình xịt khử mùi",
+      "aerosol",
+      "spray can"
+    ],
+    "group": "hazardous",
+    "disposal_advice": "Nếu còn sản phẩm hoặc không chắc bình đã rỗng, giữ nguyên và hỏi điểm thu gom chất thải nguy hại hoặc chương trình thu hồi phù hợp. Chỉ chuyển sang dòng kim loại khi hướng dẫn địa phương xác nhận bình rỗng được tiếp nhận."
+  },
+  "aluminum_food_cans": {
+    "name": "Lon nhôm đựng thực phẩm",
+    "english_name": "Aluminum food can",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Lon nhôm thực phẩm là hộp kim loại mỏng dùng đựng đồ hộp như rau, trái cây, súp hoặc thực phẩm chế biến.",
+    "common_materials": "Thân lon thường bằng nhôm; một số loại có lớp phủ mỏng bên trong và nắp kim loại.",
+    "why_group": "Nhôm có thể được tái chế nhiều lần nếu cơ sở tiếp nhận có quy trình phù hợp. Cặn thức ăn làm bẩn các vật liệu khác nên cần đổ và tráng sơ.",
+    "preparation_steps": [
+      "Đổ hết thức ăn còn lại.",
+      "Tráng nhanh để loại phần cặn, sau đó để ráo.",
+      "Không cần rửa đến mức tốn nhiều nước; làm theo yêu cầu điểm thu gom."
+    ],
+    "disposal_steps": [
+      "Để lon khô và cho vào thùng/điểm thu gom kim loại hoặc bao bì tái chế được chấp nhận.",
+      "Giữ riêng nếu nơi thu gom yêu cầu tách nhôm với thép."
+    ],
+    "reuse_options": [
+      "Có thể dùng làm hộp đựng đồ sau khi đã làm sạch và loại bỏ cạnh sắc an toàn bởi người lớn."
+    ],
+    "safety_notes": [
+      "Nắp lon và mép cắt có thể sắc; không dùng tay miết vào mép.",
+      "Không giữ lon có hóa chất hoặc chất lạ bên trong như lon thực phẩm thông thường."
+    ],
+    "local_variation": "Một số hệ thống gom chung kim loại, nơi khác phân biệt lon nhôm và lon thép; hãy theo ký hiệu và hướng dẫn địa phương.",
+    "keywords": [
+      "lon nhôm",
+      "lon đồ hộp",
+      "aluminum can",
+      "food can"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Để lon khô và cho vào thùng/điểm thu gom kim loại hoặc bao bì tái chế được chấp nhận. Giữ riêng nếu nơi thu gom yêu cầu tách nhôm với thép."
+  },
+  "aluminum_soda_cans": {
+    "name": "Lon nước giải khát bằng nhôm",
+    "english_name": "Aluminum beverage can",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Đây là lon kim loại nhẹ thường dùng cho nước ngọt, nước có ga hoặc đồ uống đóng lon.",
+    "common_materials": "Thường làm từ hợp kim nhôm với lớp sơn/in bên ngoài và lớp phủ mỏng tiếp xúc đồ uống.",
+    "why_group": "Lon nhôm có giá trị thu hồi vật liệu và thường được nhiều chương trình tái chế tiếp nhận khi sạch, rỗng.",
+    "preparation_steps": [
+      "Uống/đổ hết chất lỏng.",
+      "Tráng nhanh nếu còn đường hoặc cặn dính.",
+      "Để ráo; không cần bóp méo trừ khi điểm thu gom yêu cầu."
+    ],
+    "disposal_steps": [
+      "Đưa vào dòng thu gom lon/kim loại được chấp nhận.",
+      "Không bỏ lẫn lon còn đầy chất lỏng vào bao giấy hoặc thùng giấy."
+    ],
+    "reuse_options": [
+      "Có thể tận dụng làm đồ thủ công chỉ khi được người lớn xử lý mép cắt an toàn."
+    ],
+    "safety_notes": [
+      "Mép lon bị cắt có thể sắc; không cắt hoặc ép lon bằng tay."
+    ],
+    "local_variation": "Kiểm tra nơi thu gom có nhận lon nhôm và có yêu cầu làm sạch hay ép dẹp không.",
+    "keywords": [
+      "lon nước ngọt",
+      "lon nhôm",
+      "nước có ga",
+      "aluminum soda can"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Đưa vào dòng thu gom lon/kim loại được chấp nhận. Không bỏ lẫn lon còn đầy chất lỏng vào bao giấy hoặc thùng giấy."
+  },
+  "banana_peel": {
+    "name": "Vỏ chuối",
+    "english_name": "Banana peel",
+    "group_name": "Rác hữu cơ",
+    "what_it_is": "Vỏ chuối là phần vỏ tự nhiên còn lại sau khi ăn chuối. Nó phân hủy sinh học, nhưng tốc độ phân hủy phụ thuộc độ ẩm, nhiệt độ và điều kiện xử lý.",
+    "common_materials": "Chủ yếu là mô thực vật, nước và chất xơ hữu cơ.",
+    "why_group": "Vỏ chuối có nguồn gốc thực vật nên thường phù hợp với thu gom rác thực phẩm hoặc ủ compost được quản lý. Không nên mặc định mọi thùng rác hữu cơ đều nhận vì quy định từng nơi khác nhau.",
+    "preparation_steps": [
+      "Tách vỏ khỏi túi, màng bọc, tem hoặc miếng dán không phải hữu cơ.",
+      "Để ráo nếu quá ướt nhằm hạn chế nước rỉ trong thùng."
+    ],
+    "disposal_steps": [
+      "Cho vào thùng rác thực phẩm/compost nếu hệ thống địa phương tiếp nhận.",
+      "Nếu không có thu gom hữu cơ, bỏ theo hướng dẫn rác sinh hoạt của địa phương và đậy kín để tránh côn trùng."
+    ],
+    "reuse_options": [
+      "Có thể ủ compost tại nhà nếu có thùng ủ phù hợp và cân bằng vật liệu khô/ướt.",
+      "Không dùng vỏ chuối làm phân trực tiếp cho cây nếu chưa xử lý/ủ phù hợp."
+    ],
+    "safety_notes": [
+      "Không ăn lại phần vỏ đã bỏ hoặc đã tiếp xúc với bề mặt bẩn.",
+      "Rửa tay sau khi xử lý rác thực phẩm."
+    ],
+    "local_variation": "Khả năng compost phụ thuộc hệ thống thu gom; không tự ý bỏ vào thùng hữu cơ nếu cơ sở không nhận rác thực phẩm.",
+    "keywords": [
+      "vỏ chuối",
+      "banana peel",
+      "chuối",
+      "vỏ trái cây"
+    ],
+    "group": "organic",
+    "disposal_advice": "Cho vào thùng rác thực phẩm/compost nếu hệ thống địa phương tiếp nhận. Nếu không có thu gom hữu cơ, bỏ theo hướng dẫn rác sinh hoạt của địa phương và đậy kín để tránh côn trùng."
+  },
+  "battery": {
+    "name": "Pin",
+    "english_name": "Battery",
+    "group_name": "Rác nguy hại",
+    "what_it_is": "Pin là thiết bị lưu trữ năng lượng hóa học để cung cấp điện. Dataset nhận diện pin nói chung, không xác định chắc chắn pin alkaline, lithium-ion, pin cúc áo hay loại pin cụ thể.",
+    "common_materials": "Có thể chứa kim loại, chất điện phân và vật liệu khác; thành phần thay đổi đáng kể theo loại pin.",
+    "why_group": "Pin đã qua sử dụng cần thu gom riêng vì một số loại có thể rò rỉ, gây cháy hoặc phát tán chất không phù hợp nếu bị nghiền, đốt hoặc xử lý sai.",
+    "preparation_steps": [
+      "Không tháo rời pin để xem bên trong.",
+      "Nếu pin còn gắn trong thiết bị, nhờ người lớn hoặc điểm sửa chữa/thu gom hướng dẫn tháo an toàn.",
+      "Với pin lithium hoặc pin phồng/hư hỏng, không tự xử lý; giữ tránh xa vật dễ cháy và liên hệ điểm tiếp nhận chuyên trách."
+    ],
+    "disposal_steps": [
+      "Đưa pin đến điểm thu gom pin hoặc rác điện tử có xác nhận tiếp nhận đúng loại pin.",
+      "Giữ pin tách khỏi rác sinh hoạt và tránh để lẫn với vật kim loại có thể gây chập cực."
+    ],
+    "reuse_options": [
+      "Ưu tiên dùng thiết bị/pin sạc có thể thay thế đúng chuẩn; pin đã thải bỏ không nên được tái sử dụng."
+    ],
+    "safety_notes": [
+      "Không đốt, đập, chọc thủng, bóp méo, ngâm nước hoặc nối hai cực pin.",
+      "Không bỏ pin lithium hỏng/phồng vào túi rác thông thường.",
+      "Nếu pin nóng, bốc mùi, rò rỉ hoặc biến dạng, không chạm trực tiếp; báo người lớn và đơn vị chuyên trách."
+    ],
+    "local_variation": "Điểm thu gom có thể chỉ nhận một số loại pin; cần hỏi trước, đặc biệt với pin lithium-ion và pin hư hỏng.",
+    "keywords": [
+      "pin",
+      "battery",
+      "pin tiểu",
+      "pin sạc",
+      "pin lithium"
+    ],
+    "group": "hazardous",
+    "disposal_advice": "Đưa pin đến điểm thu gom pin hoặc rác điện tử có xác nhận tiếp nhận đúng loại pin. Giữ pin tách khỏi rác sinh hoạt và tránh để lẫn với vật kim loại có thể gây chập cực."
+  },
+  "cable": {
+    "name": "Cáp điện tử",
+    "english_name": "Electronic cable",
+    "group_name": "Rác điện tử",
+    "what_it_is": "Cáp điện tử là dây dùng truyền điện hoặc tín hiệu, có thể là cáp sạc, cáp USB, dây mạng hoặc dây kết nối thiết bị.",
+    "common_materials": "Thường có lõi đồng hoặc kim loại dẫn điện, lớp cách điện bằng nhựa/cao su và đôi khi có đầu nối điện tử.",
+    "why_group": "Cáp gồm nhiều vật liệu kết hợp và có thể chứa kim loại có thể thu hồi; nên được đưa đến điểm thu gom rác điện tử thay vì bỏ lẫn như rác nhựa thông thường.",
+    "preparation_steps": [
+      "Cuộn gọn dây, không cắt hoặc bóc lớp cách điện.",
+      "Tách dây khỏi thiết bị nếu có thể tháo rời bình thường và an toàn."
+    ],
+    "disposal_steps": [
+      "Đưa đến điểm tiếp nhận rác điện tử hoặc cửa hàng/chương trình thu hồi cáp.",
+      "Nếu dây còn dùng tốt, cân nhắc tặng hoặc tái sử dụng."
+    ],
+    "reuse_options": [
+      "Dùng lại cho thiết bị tương thích nếu dây không sờn, nứt, lộ lõi hoặc nóng bất thường."
+    ],
+    "safety_notes": [
+      "Không sử dụng dây sạc hư hỏng, lộ lõi hoặc có dấu hiệu cháy.",
+      "Không tự đốt hoặc bóc vỏ để lấy kim loại."
+    ],
+    "local_variation": "Một số nơi có điểm thu gom dây cáp riêng; không mặc định mọi thùng nhựa đều nhận cáp.",
+    "keywords": [
+      "cáp",
+      "dây sạc",
+      "dây điện tử",
+      "cable",
+      "dây usb"
+    ],
+    "group": "e_waste",
+    "disposal_advice": "Đưa đến điểm tiếp nhận rác điện tử hoặc cửa hàng/chương trình thu hồi cáp. Nếu dây còn dùng tốt, cân nhắc tặng hoặc tái sử dụng."
+  },
+  "cardboard_boxes": {
+    "name": "Thùng carton",
+    "english_name": "Cardboard box",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Thùng carton là bao bì giấy nhiều lớp hoặc giấy sóng, thường dùng đóng gói và vận chuyển hàng hóa.",
+    "common_materials": "Chủ yếu là sợi giấy; có thể kèm băng keo, ghim kim loại, nhãn và lớp phủ chống ẩm.",
+    "why_group": "Sợi giấy có thể được thu hồi nếu thùng khô, tương đối sạch và không bị nhiễm dầu mỡ hoặc hóa chất.",
+    "preparation_steps": [
+      "Lấy hết hàng hóa, xốp, túi và vật chèn bên trong.",
+      "Làm phẳng thùng để tiết kiệm diện tích.",
+      "Gỡ băng keo lớn và ghim nếu điểm thu gom yêu cầu hoặc có thể làm an toàn."
+    ],
+    "disposal_steps": [
+      "Giữ khô và đưa vào dòng thu gom giấy/carton.",
+      "Thùng ướt, dính dầu mỡ hoặc hóa chất cần phân loại theo hướng dẫn địa phương."
+    ],
+    "reuse_options": [
+      "Dùng lại để đóng gói, lưu trữ hoặc làm vật liệu thủ công khi còn sạch và chắc."
+    ],
+    "safety_notes": [
+      "Cẩn thận với ghim, đinh hoặc cạnh bị rách.",
+      "Không tái sử dụng thùng từng chứa hóa chất/hoá chất nông nghiệp cho đồ ăn."
+    ],
+    "local_variation": "Một số nơi thu gom carton riêng với giấy mỏng; hãy bó gọn và đặt đúng ngày/điểm thu gom.",
+    "keywords": [
+      "thùng carton",
+      "hộp carton",
+      "bìa carton",
+      "cardboard box"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Giữ khô và đưa vào dòng thu gom giấy/carton. Thùng ướt, dính dầu mỡ hoặc hóa chất cần phân loại theo hướng dẫn địa phương."
+  },
+  "cardboard_packaging": {
+    "name": "Bao bì carton",
+    "english_name": "Cardboard packaging",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Bao bì carton là các khay, hộp hoặc miếng giấy cứng dùng bọc và bảo vệ hàng hóa. Chúng khác nhau về độ dày và lớp phủ.",
+    "common_materials": "Thường là giấy bìa, giấy sóng; có thể có màng nhựa, lớp chống thấm, keo hoặc vật liệu ghép.",
+    "why_group": "Giấy carton sạch và khô thường được tái chế. Bao bì ghép nhiều lớp hoặc phủ nhựa có thể không được mọi cơ sở tiếp nhận.",
+    "preparation_steps": [
+      "Lấy hết thức ăn, bụi bẩn và vật liệu chèn.",
+      "Tách phần nhựa/màng ghép nếu có thể tháo rời dễ dàng.",
+      "Giữ giấy khô."
+    ],
+    "disposal_steps": [
+      "Thu gom cùng giấy/carton nếu cơ sở tiếp nhận.",
+      "Bao bì ghép khó tách cần kiểm tra hướng dẫn của điểm thu gom."
+    ],
+    "reuse_options": [
+      "Dùng lại làm hộp lưu trữ hoặc vật liệu đóng gói khi còn sạch."
+    ],
+    "safety_notes": [
+      "Không đốt bao bì phủ mực, keo hoặc nhựa.",
+      "Không tái chế giấy bị dính hóa chất hoặc dầu mỡ nếu cơ sở không nhận."
+    ],
+    "local_variation": "Bao bì carton nhiều lớp có thể có quy tắc riêng; phân loại dựa trên ký hiệu và hướng dẫn nơi thu gom.",
+    "keywords": [
+      "bao bì carton",
+      "hộp giấy",
+      "carton packaging",
+      "giấy bìa"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Thu gom cùng giấy/carton nếu cơ sở tiếp nhận. Bao bì ghép khó tách cần kiểm tra hướng dẫn của điểm thu gom."
+  },
+  "clothing": {
+    "name": "Quần áo và vải vóc",
+    "english_name": "Clothing / textiles",
+    "group_name": "Ưu tiên tái sử dụng",
+    "what_it_is": "Quần áo là sản phẩm dệt may đã qua sử dụng. Một món đồ có thể gồm nhiều loại sợi, khóa kéo, nút, lớp lót và phụ kiện.",
+    "common_materials": "Có thể là cotton, polyester, nylon, len hoặc pha nhiều loại sợi; ảnh không cho biết chính xác thành phần.",
+    "why_group": "Quần áo còn tốt nên ưu tiên dùng tiếp hoặc quyên góp. Vải không còn sử dụng được có thể cần chương trình thu gom dệt may riêng; không phải nơi nào cũng tái chế được mọi loại vải.",
+    "preparation_steps": [
+      "Kiểm tra đồ còn dùng được không.",
+      "Giặt và làm khô trước khi quyên góp nếu điều kiện cho phép.",
+      "Tách đồ ướt, mốc hoặc nhiễm chất bẩn khỏi đồ có thể quyên góp."
+    ],
+    "disposal_steps": [
+      "Quyên góp/trao đổi đồ còn tốt cho nơi có tiếp nhận.",
+      "Vải hỏng cần tìm chương trình thu gom dệt may hoặc xử lý theo hướng dẫn rác sinh hoạt."
+    ],
+    "reuse_options": [
+      "Sửa đường may, thay nút/khóa kéo.",
+      "Tận dụng vải sạch làm khăn lau hoặc vật liệu thủ công."
+    ],
+    "safety_notes": [
+      "Không quyên góp quần áo mốc, ướt lâu ngày hoặc nhiễm chất nguy hiểm.",
+      "Giặt riêng vật liệu có nguy cơ nhiễm bẩn và nhờ người lớn hướng dẫn."
+    ],
+    "local_variation": "Không bỏ quần áo vào thùng giấy/nhựa tái chế. Tìm chương trình nhận vải hoặc quyên góp đáng tin cậy.",
+    "keywords": [
+      "quần áo",
+      "áo",
+      "quần",
+      "vải",
+      "clothing",
+      "textile"
+    ],
+    "group": "reuse",
+    "disposal_advice": "Quyên góp/trao đổi đồ còn tốt cho nơi có tiếp nhận. Vải hỏng cần tìm chương trình thu gom dệt may hoặc xử lý theo hướng dẫn rác sinh hoạt."
+  },
+  "coffee_grounds": {
+    "name": "Bã cà phê",
+    "english_name": "Coffee grounds",
+    "group_name": "Rác hữu cơ",
+    "what_it_is": "Bã cà phê là phần hạt cà phê đã xay còn lại sau khi pha. Đây là phụ phẩm thực phẩm có độ ẩm cao sau pha.",
+    "common_materials": "Chất hữu cơ thực vật, nước và một lượng nhỏ dầu tự nhiên còn lại sau chiết xuất.",
+    "why_group": "Bã cà phê có thể được ủ compost trong hệ thống phù hợp. Nếu bỏ số lượng lớn vào một đống ủ thiếu vật liệu khô, chúng có thể nén chặt và gây mùi.",
+    "preparation_steps": [
+      "Để ráo bã, tránh đổ nhiều nước vào thùng.",
+      "Tách giấy lọc hoặc viên nang nếu hệ thống compost không nhận chúng."
+    ],
+    "disposal_steps": [
+      "Cho vào dòng thu gom rác thực phẩm/compost nếu nơi đó tiếp nhận.",
+      "Ủ tại nhà với vật liệu khô giàu carbon và thông khí phù hợp."
+    ],
+    "reuse_options": [
+      "Dùng một lượng nhỏ trong compost; tránh rải dày trực tiếp quanh gốc cây."
+    ],
+    "safety_notes": [
+      "Không đổ bã xuống cống vì có thể tích tụ và gây tắc.",
+      "Để xa thú nuôi nếu chúng có thể ăn phải bã cà phê."
+    ],
+    "local_variation": "Viên nang cà phê, giấy lọc và bã cà phê có thể cần tách theo quy định của hệ thống xử lý.",
+    "keywords": [
+      "bã cà phê",
+      "coffee grounds",
+      "bã cafe"
+    ],
+    "group": "organic",
+    "disposal_advice": "Cho vào dòng thu gom rác thực phẩm/compost nếu nơi đó tiếp nhận. Ủ tại nhà với vật liệu khô giàu carbon và thông khí phù hợp."
+  },
+  "computer_mouse": {
+    "name": "Chuột máy tính",
+    "english_name": "Computer mouse",
+    "group_name": "Rác điện tử",
+    "what_it_is": "Chuột máy tính là thiết bị nhập liệu điều khiển con trỏ. Loại có dây dùng cáp; loại không dây có pin và bộ phát/thu tín hiệu.",
+    "common_materials": "Vỏ nhựa, bảng mạch, cảm biến, nút bấm, dây đồng hoặc pin ở một số mẫu.",
+    "why_group": "Thiết bị có mạch điện, cảm biến và linh kiện nên thuộc rác điện tử khi hỏng; không nên coi toàn bộ là nhựa tái chế.",
+    "preparation_steps": [
+      "Nếu còn hoạt động, ưu tiên tiếp tục sử dụng hoặc tặng lại.",
+      "Nếu có pin rời, nhờ người lớn tháo theo hướng dẫn của nhà sản xuất và thu gom pin riêng."
+    ],
+    "disposal_steps": [
+      "Đưa chuột hỏng đến điểm thu gom rác điện tử hoặc chương trình thu hồi thiết bị.",
+      "Không bỏ vào thùng nhựa tái chế thông thường."
+    ],
+    "reuse_options": [
+      "Làm sạch bên ngoài và dùng lại nếu còn hoạt động.",
+      "Có thể sửa dây/nút tại cơ sở sửa chữa phù hợp."
+    ],
+    "safety_notes": [
+      "Không tự mở thiết bị để lấy linh kiện nếu không có kiến thức và hướng dẫn.",
+      "Không làm ướt phần điện tử."
+    ],
+    "local_variation": "Hỏi điểm thu gom có nhận phụ kiện máy tính nhỏ hay không; pin bên trong có thể phải tách riêng.",
+    "keywords": [
+      "chuột máy tính",
+      "chuột máy tính không dây",
+      "mouse",
+      "computer mouse"
+    ],
+    "group": "e_waste",
+    "disposal_advice": "Đưa chuột hỏng đến điểm thu gom rác điện tử hoặc chương trình thu hồi thiết bị. Không bỏ vào thùng nhựa tái chế thông thường."
+  },
+  "disposable_plastic_cutlery": {
+    "name": "Dao, thìa, nĩa nhựa dùng một lần",
+    "english_name": "Disposable plastic cutlery",
+    "group_name": "Rác còn lại",
+    "what_it_is": "Đây là dụng cụ ăn uống bằng nhựa dùng một lần. Chúng thường nhỏ, nhẹ và dễ dính thức ăn.",
+    "common_materials": "Có thể là polypropylene, polystyrene hoặc loại nhựa khác; chỉ nhìn ảnh thường không xác định được polymer chính xác.",
+    "why_group": "Kích thước nhỏ, bẩn thức ăn và nhiều loại nhựa mỏng khiến dụng cụ này không được mọi chương trình tái chế tiếp nhận.",
+    "preparation_steps": [
+      "Gạt bỏ thức ăn còn sót.",
+      "Không cần rửa kỹ nếu địa phương không có chương trình thu gom riêng."
+    ],
+    "disposal_steps": [
+      "Kiểm tra ký hiệu vật liệu và quy định nơi thu gom.",
+      "Nếu không có chương trình tiếp nhận, bỏ theo dòng rác còn lại."
+    ],
+    "reuse_options": [
+      "Ưu tiên thay bằng dụng cụ dùng nhiều lần; không nên tái sử dụng đồ dùng một lần đã nứt hoặc mất vệ sinh."
+    ],
+    "safety_notes": [
+      "Tránh dùng lại dụng cụ nứt, biến dạng hoặc đã tiếp xúc chất bẩn.",
+      "Không đốt nhựa."
+    ],
+    "local_variation": "Không phải mọi đồ nhựa đều tái chế được; hỏi điểm thu gom có nhận loại nhựa nhỏ này không.",
+    "keywords": [
+      "thìa nhựa",
+      "nĩa nhựa",
+      "dao nhựa",
+      "plastic cutlery"
+    ],
+    "group": "residual",
+    "disposal_advice": "Kiểm tra ký hiệu vật liệu và quy định nơi thu gom. Nếu không có chương trình tiếp nhận, bỏ theo dòng rác còn lại."
+  },
+  "eggshells": {
+    "name": "Vỏ trứng",
+    "english_name": "Eggshells",
+    "group_name": "Rác hữu cơ",
+    "what_it_is": "Vỏ trứng là lớp vỏ cứng còn lại sau khi lấy phần trứng bên trong. Nó có nguồn gốc sinh học nhưng phân hủy chậm hơn một số loại thức ăn mềm.",
+    "common_materials": "Chủ yếu là vật liệu khoáng giàu calcium carbonate cùng màng hữu cơ mỏng.",
+    "why_group": "Vỏ trứng có thể được đưa vào một số hệ thống compost hoặc rác thực phẩm nếu cơ sở nhận; nghiền nhỏ có thể giúp tăng diện tích tiếp xúc trong quá trình ủ.",
+    "preparation_steps": [
+      "Gạt bỏ phần lòng trắng/lòng đỏ còn dính.",
+      "Để ráo; nghiền nhỏ chỉ khi hệ thống ủ yêu cầu hoặc cho phép."
+    ],
+    "disposal_steps": [
+      "Đưa vào thùng hữu cơ/compost nếu chương trình tiếp nhận vỏ trứng.",
+      "Nếu không có thu gom hữu cơ, xử lý theo hướng dẫn rác sinh hoạt địa phương."
+    ],
+    "reuse_options": [
+      "Có thể ủ compost tại nhà; không xem vỏ trứng chưa xử lý là phân bón tức thời."
+    ],
+    "safety_notes": [
+      "Rửa tay sau khi tiếp xúc với vỏ trứng sống để hạn chế nguy cơ nhiễm bẩn thực phẩm.",
+      "Không để vỏ sống lẫn vào khu vực chế biến thức ăn."
+    ],
+    "local_variation": "Một số cơ sở compost nhận vỏ trứng, một số hệ thống thu gom hữu cơ có danh sách vật liệu riêng.",
+    "keywords": [
+      "vỏ trứng",
+      "eggshell",
+      "egg shell"
+    ],
+    "group": "organic",
+    "disposal_advice": "Đưa vào thùng hữu cơ/compost nếu chương trình tiếp nhận vỏ trứng. Nếu không có thu gom hữu cơ, xử lý theo hướng dẫn rác sinh hoạt địa phương."
+  },
+  "food_waste": {
+    "name": "Thức ăn thừa và rác thực phẩm",
+    "english_name": "Food waste",
+    "group_name": "Rác hữu cơ",
+    "what_it_is": "Rác thực phẩm là phần thức ăn hoặc nguyên liệu thực phẩm không còn dùng, ví dụ cơm, rau, trái cây, thức ăn thừa và phần bỏ đi khi sơ chế.",
+    "common_materials": "Thành phần hỗn hợp từ thực vật hoặc động vật; có thể chứa nước, dầu, gia vị và xương.",
+    "why_group": "Phần hữu cơ có thể được xử lý bằng compost hoặc hệ thống tiêu hóa kỵ khí nếu cơ sở tiếp nhận. Bao bì, dao nĩa và màng bọc không phải rác thực phẩm.",
+    "preparation_steps": [
+      "Tách bao bì, túi nilon, xương lớn và vật không phải thực phẩm theo hướng dẫn địa phương.",
+      "Để ráo nước tự do nếu có thể.",
+      "Đậy kín thùng để hạn chế mùi và côn trùng."
+    ],
+    "disposal_steps": [
+      "Đưa vào hệ thống thu gom thức ăn thừa nếu có.",
+      "Ủ compost chỉ khi hệ thống tại nhà được thiết kế để nhận đúng loại thức ăn.",
+      "Nếu không có hệ thống hữu cơ, phân loại theo quy định rác sinh hoạt địa phương."
+    ],
+    "reuse_options": [
+      "Lên kế hoạch mua và bảo quản thực phẩm để giảm phát sinh.",
+      "Phần thực phẩm vẫn an toàn có thể được bảo quản/dùng lại trước khi trở thành rác."
+    ],
+    "safety_notes": [
+      "Không dùng lại thực phẩm đã hỏng hoặc không bảo đảm an toàn.",
+      "Rửa tay và vệ sinh thùng chứa thường xuyên."
+    ],
+    "local_variation": "Nhiều chương trình chỉ nhận một số loại thức ăn; xương, dầu ăn, thịt hoặc thực phẩm nhiều nước có thể có quy định riêng.",
+    "keywords": [
+      "thức ăn thừa",
+      "rác thực phẩm",
+      "food scraps",
+      "đồ ăn thừa"
+    ],
+    "group": "organic",
+    "disposal_advice": "Đưa vào hệ thống thu gom thức ăn thừa nếu có. Ủ compost chỉ khi hệ thống tại nhà được thiết kế để nhận đúng loại thức ăn. Nếu không có hệ thống hữu cơ, phân loại theo quy định rác sinh hoạt địa phương."
+  },
+  "glass_beverage_bottles": {
+    "name": "Chai thủy tinh đựng đồ uống",
+    "english_name": "Glass beverage bottle",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Chai thủy tinh đựng đồ uống là vật chứa bằng thủy tinh dùng cho nước, nước ngọt, bia hoặc đồ uống khác.",
+    "common_materials": "Thủy tinh bao bì; nắp có thể bằng kim loại hoặc nhựa, nhãn bằng giấy/nhựa.",
+    "why_group": "Thủy tinh bao bì thường có thể thu hồi nếu được phân loại đúng. Tuy nhiên thủy tinh chịu nhiệt, gốm và kính cửa không nhất thiết được xử lý cùng dòng.",
+    "preparation_steps": [
+      "Đổ hết chất lỏng và tráng sơ nếu cần.",
+      "Tháo nắp nếu điểm thu gom yêu cầu tách riêng.",
+      "Để chai nguyên vẹn, không đập vỡ."
+    ],
+    "disposal_steps": [
+      "Đưa đến điểm thu gom chai/lọ thủy tinh được tiếp nhận.",
+      "Phân biệt với kính cửa, gương, bóng đèn và gốm sứ."
+    ],
+    "reuse_options": [
+      "Có thể tái sử dụng để chứa đồ phù hợp nếu chai còn nguyên, sạch và được vệ sinh đúng cách."
+    ],
+    "safety_notes": [
+      "Chai vỡ có nguy cơ gây đứt tay; không tự nhặt bằng tay trần.",
+      "Không bỏ thủy tinh vỡ rời vào túi mỏng."
+    ],
+    "local_variation": "Màu chai và quy định tiếp nhận có thể khác nhau theo cơ sở; hỏi trước nếu chai đặc biệt hoặc có chứa hóa chất.",
+    "keywords": [
+      "chai thủy tinh",
+      "glass bottle",
+      "chai nước thủy tinh"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Đưa đến điểm thu gom chai/lọ thủy tinh được tiếp nhận. Phân biệt với kính cửa, gương, bóng đèn và gốm sứ."
+  },
+  "glass_cosmetic_containers": {
+    "name": "Lọ mỹ phẩm thủy tinh",
+    "english_name": "Glass cosmetic container",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Đây là lọ hoặc chai thủy tinh đựng mỹ phẩm như serum, kem, nước hoa hoặc sản phẩm chăm sóc cá nhân.",
+    "common_materials": "Thân lọ thủy tinh; nắp, vòi bơm, ống nhỏ giọt và vòng trang trí có thể gồm nhiều vật liệu.",
+    "why_group": "Thân thủy tinh có thể tái chế nếu sạch và cơ sở nhận đúng loại; bộ phận bơm hoặc nắp thường cần tách riêng.",
+    "preparation_steps": [
+      "Lấy hết sản phẩm còn lại theo hướng dẫn trên bao bì.",
+      "Tách nắp/vòi bơm nếu tháo được dễ dàng.",
+      "Tráng lọ nếu loại sản phẩm và hướng dẫn cho phép."
+    ],
+    "disposal_steps": [
+      "Đưa thân lọ đến dòng thủy tinh bao bì nếu điểm thu gom tiếp nhận.",
+      "Tách phụ kiện theo vật liệu hoặc hướng dẫn nơi thu gom."
+    ],
+    "reuse_options": [
+      "Có thể tái sử dụng lọ sạch cho mục đích phù hợp, tránh dùng lại bao bì không rõ thành phần để đựng thực phẩm."
+    ],
+    "safety_notes": [
+      "Không trộn sản phẩm hóa mỹ phẩm còn dư vào cống hoặc đất.",
+      "Cẩn thận với chai/lọ vỡ và vòi bơm kim loại."
+    ],
+    "local_variation": "Mỹ phẩm, nước hoa và lọ có sản phẩm đặc biệt có thể cần xử lý phần dư riêng; hỏi điểm thu gom khi không chắc.",
+    "keywords": [
+      "lọ mỹ phẩm",
+      "chai serum",
+      "lọ nước hoa",
+      "glass cosmetic"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Đưa thân lọ đến dòng thủy tinh bao bì nếu điểm thu gom tiếp nhận. Tách phụ kiện theo vật liệu hoặc hướng dẫn nơi thu gom."
+  },
+  "glass_food_jars": {
+    "name": "Hũ thủy tinh đựng thực phẩm",
+    "english_name": "Glass food jar",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Hũ thủy tinh là vật chứa miệng rộng dùng đựng mứt, sốt, gia vị, thực phẩm đóng lọ hoặc đồ khô.",
+    "common_materials": "Thân thủy tinh; nắp thường bằng kim loại hoặc nhựa và có vòng đệm.",
+    "why_group": "Hũ thủy tinh sạch thường được nhiều hệ thống tiếp nhận. Nắp và vòng đệm có thể được phân loại riêng.",
+    "preparation_steps": [
+      "Gạt bỏ thức ăn còn sót và tráng sạch.",
+      "Để ráo.",
+      "Tháo nắp nếu điểm thu gom yêu cầu."
+    ],
+    "disposal_steps": [
+      "Thu gom cùng chai/lọ thủy tinh bao bì nếu cơ sở nhận.",
+      "Không trộn với gốm, sành hoặc kính chịu nhiệt."
+    ],
+    "reuse_options": [
+      "Dùng lại để chứa đồ khô hoặc thực phẩm nếu hũ nguyên vẹn, được vệ sinh thích hợp."
+    ],
+    "safety_notes": [
+      "Không sử dụng hũ sứt miệng hoặc nứt để đựng thực phẩm.",
+      "Không đổ chất lỏng nóng vào hũ lạnh nếu không được thiết kế chịu nhiệt."
+    ],
+    "local_variation": "Một số điểm thu gom yêu cầu tháo nắp, một số nơi chấp nhận nắp riêng; làm theo hướng dẫn tại chỗ.",
+    "keywords": [
+      "hũ thủy tinh",
+      "lọ thủy tinh",
+      "glass jar",
+      "hũ mứt"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Thu gom cùng chai/lọ thủy tinh bao bì nếu cơ sở nhận. Không trộn với gốm, sành hoặc kính chịu nhiệt."
+  },
+  "keyboard": {
+    "name": "Bàn phím máy tính",
+    "english_name": "Computer keyboard",
+    "group_name": "Rác điện tử",
+    "what_it_is": "Bàn phím là thiết bị nhập liệu gồm các phím và mạch điện, kết nối với máy tính qua dây hoặc kết nối không dây.",
+    "common_materials": "Vỏ nhựa, keycap, bảng mạch, màng tiếp điểm, kim loại và có thể có pin trong mẫu không dây.",
+    "why_group": "Bàn phím có linh kiện điện tử và vật liệu hỗn hợp nên thuộc rác điện tử khi không còn sử dụng; không nên tháo rời để bỏ riêng từng phần nếu không có hướng dẫn chuyên môn.",
+    "preparation_steps": [
+      "Nếu còn dùng được, ưu tiên sửa chữa, vệ sinh hoặc tặng lại.",
+      "Nếu có pin rời, nhờ người lớn tháo theo hướng dẫn và thu gom pin riêng."
+    ],
+    "disposal_steps": [
+      "Đưa bàn phím hỏng đến điểm thu gom rác điện tử hoặc chương trình thu hồi thiết bị.",
+      "Không bỏ chung vào thùng nhựa tái chế."
+    ],
+    "reuse_options": [
+      "Có thể dùng tiếp, sửa cáp/phím hoặc chuyển cho người cần nếu thiết bị còn hoạt động."
+    ],
+    "safety_notes": [
+      "Không đổ chất lỏng vào bàn phím.",
+      "Không tự tháo mạch hoặc pin tích hợp.",
+      "Không đốt thiết bị."
+    ],
+    "local_variation": "Một số điểm thu gom nhận thiết bị ngoại vi như bàn phím/chuột; xác nhận trước khi mang đến.",
+    "keywords": [
+      "bàn phím",
+      "keyboard",
+      "bàn phím máy tính"
+    ],
+    "group": "e_waste",
+    "disposal_advice": "Đưa bàn phím hỏng đến điểm thu gom rác điện tử hoặc chương trình thu hồi thiết bị. Không bỏ chung vào thùng nhựa tái chế."
+  },
+  "laptop": {
+    "name": "Máy tính xách tay",
+    "english_name": "Laptop computer",
+    "group_name": "Rác điện tử",
+    "what_it_is": "Laptop là máy tính cá nhân gọn nhẹ gồm màn hình, bàn phím, pin, bo mạch, bộ nhớ và các linh kiện điện tử.",
+    "common_materials": "Vỏ nhựa hoặc kim loại, màn hình, pin lithium-ion ở nhiều mẫu, bảng mạch và nhiều linh kiện khác.",
+    "why_group": "Thiết bị có nhiều linh kiện điện tử và có thể chứa pin nên cần sửa chữa, thu hồi hoặc chuyển đến đơn vị xử lý rác điện tử phù hợp.",
+    "preparation_steps": [
+      "Nếu còn hoạt động, sao lưu và xóa dữ liệu cá nhân trước khi chuyển nhượng.",
+      "Nhờ người có chuyên môn kiểm tra pin, đặc biệt nếu pin phồng hoặc máy nóng bất thường.",
+      "Không tự tháo pin tích hợp."
+    ],
+    "disposal_steps": [
+      "Đưa đến chương trình thu hồi thiết bị hoặc cơ sở xử lý rác điện tử có uy tín.",
+      "Không bỏ laptop vào thùng rác sinh hoạt hoặc thùng nhựa/kim loại thông thường."
+    ],
+    "reuse_options": [
+      "Sửa chữa, nâng cấp hoặc tặng lại khi còn dùng được.",
+      "Một số linh kiện có thể được thu hồi bởi đơn vị chuyên trách."
+    ],
+    "safety_notes": [
+      "Không đập, đốt hoặc tự tháo pin.",
+      "Không tiếp tục sử dụng nếu pin phồng, rò rỉ hoặc có dấu hiệu quá nhiệt.",
+      "Xóa dữ liệu cá nhân trước khi bàn giao."
+    ],
+    "local_variation": "Hỏi nơi tiếp nhận có xử lý pin bên trong và có quy trình bảo vệ dữ liệu hay không.",
+    "keywords": [
+      "laptop",
+      "máy tính xách tay",
+      "máy tính portable"
+    ],
+    "group": "e_waste",
+    "disposal_advice": "Đưa đến chương trình thu hồi thiết bị hoặc cơ sở xử lý rác điện tử có uy tín. Không bỏ laptop vào thùng rác sinh hoạt hoặc thùng nhựa/kim loại thông thường."
+  },
+  "magazines": {
+    "name": "Tạp chí",
+    "english_name": "Magazines",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Tạp chí là ấn phẩm in định kỳ, thường dùng giấy tráng phủ hoặc giấy bóng với mực in và đôi khi có ghim kim loại.",
+    "common_materials": "Giấy, mực in, lớp phủ bề mặt và ghim đóng gáy.",
+    "why_group": "Giấy sạch và khô có thể được thu hồi; lớp phủ bóng hoặc ghim có thể được xử lý trong quy trình riêng tùy cơ sở.",
+    "preparation_steps": [
+      "Giữ khô và không để dính dầu mỡ hoặc thức ăn.",
+      "Gỡ vật nhựa bọc ngoài nếu có."
+    ],
+    "disposal_steps": [
+      "Đưa vào dòng thu gom giấy/tạp chí nếu nơi thu gom tiếp nhận giấy tráng phủ.",
+      "Tách ghim nếu điểm thu gom yêu cầu."
+    ],
+    "reuse_options": [
+      "Cho người khác đọc lại, trao đổi sách báo hoặc dùng làm vật liệu thủ công."
+    ],
+    "safety_notes": [
+      "Không đốt giấy in.",
+      "Không đưa tài liệu có thông tin cá nhân nhạy cảm ra ngoài khi chưa xé hủy phù hợp."
+    ],
+    "local_variation": "Một số cơ sở chỉ nhận giấy không tráng phủ; hỏi trước về tạp chí giấy bóng.",
+    "keywords": [
+      "tạp chí",
+      "magazine",
+      "ấn phẩm"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Đưa vào dòng thu gom giấy/tạp chí nếu nơi thu gom tiếp nhận giấy tráng phủ. Tách ghim nếu điểm thu gom yêu cầu."
+  },
+  "mobile_phone": {
+    "name": "Điện thoại di động",
+    "english_name": "Mobile phone",
+    "group_name": "Rác điện tử",
+    "what_it_is": "Điện thoại di động là thiết bị liên lạc điện tử có màn hình, pin, camera, bảng mạch và các linh kiện kết nối.",
+    "common_materials": "Kính màn hình, nhựa/kim loại, pin thường là lithium-ion, bảng mạch và nhiều linh kiện điện tử.",
+    "why_group": "Thiết bị chứa pin và nhiều vật liệu điện tử cần được thu hồi hoặc xử lý chuyên biệt; không nên vứt vào rác thông thường.",
+    "preparation_steps": [
+      "Sao lưu và xóa dữ liệu cá nhân, đăng xuất tài khoản trước khi bàn giao.",
+      "Tháo SIM/thẻ nhớ nếu có và giữ lại khi cần.",
+      "Nếu pin phồng/nóng/rò rỉ, không sạc hoặc tự tháo; nhờ người lớn và đơn vị chuyên trách."
+    ],
+    "disposal_steps": [
+      "Ưu tiên sửa chữa hoặc chương trình thu hồi điện thoại cũ.",
+      "Nếu hỏng, đưa đến điểm thu gom rác điện tử có tiếp nhận thiết bị chứa pin."
+    ],
+    "reuse_options": [
+      "Tặng lại khi máy còn dùng tốt và đã xóa dữ liệu.",
+      "Dùng làm thiết bị dự phòng nếu pin và máy còn an toàn."
+    ],
+    "safety_notes": [
+      "Không đập, uốn, đốt hoặc chọc thủng pin.",
+      "Không bỏ điện thoại chung với rác sinh hoạt.",
+      "Xóa dữ liệu cá nhân trước khi chuyển giao."
+    ],
+    "local_variation": "Chọn cơ sở thu hồi có quy trình xử lý pin và bảo vệ dữ liệu; hỏi rõ trước khi bàn giao.",
+    "keywords": [
+      "điện thoại",
+      "điện thoại di động",
+      "smartphone",
+      "mobile phone"
+    ],
+    "group": "e_waste",
+    "disposal_advice": "Ưu tiên sửa chữa hoặc chương trình thu hồi điện thoại cũ. Nếu hỏng, đưa đến điểm thu gom rác điện tử có tiếp nhận thiết bị chứa pin."
+  },
+  "newspaper": {
+    "name": "Báo giấy",
+    "english_name": "Newspaper",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Báo giấy là ấn phẩm in trên giấy mỏng, thường có nhiều trang và mực in.",
+    "common_materials": "Sợi giấy và mực in; có thể kèm dây buộc, túi nhựa hoặc tờ quảng cáo khác loại.",
+    "why_group": "Báo sạch, khô thường phù hợp với thu gom giấy tái chế. Giấy ướt, dính dầu hoặc hóa chất có thể làm giảm chất lượng sợi.",
+    "preparation_steps": [
+      "Gỡ túi bọc nhựa, dây buộc và vật không phải giấy.",
+      "Giữ báo khô và bó gọn."
+    ],
+    "disposal_steps": [
+      "Đưa vào điểm thu gom giấy/báo.",
+      "Không trộn giấy bị nhiễm dầu mỡ hoặc hóa chất vào giấy sạch."
+    ],
+    "reuse_options": [
+      "Dùng lại để gói đồ hoặc lót bảo vệ khi chuyển nhà, miễn không tiếp xúc thực phẩm trực tiếp nếu mực in không phù hợp."
+    ],
+    "safety_notes": [
+      "Không đốt giấy báo.",
+      "Không dùng giấy in mực làm lớp tiếp xúc trực tiếp với thức ăn."
+    ],
+    "local_variation": "Theo yêu cầu nơi thu gom về bó gọn hoặc tách báo khỏi giấy carton.",
+    "keywords": [
+      "báo giấy",
+      "newspaper",
+      "giấy báo"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Đưa vào điểm thu gom giấy/báo. Không trộn giấy bị nhiễm dầu mỡ hoặc hóa chất vào giấy sạch."
+  },
+  "office_paper": {
+    "name": "Giấy văn phòng",
+    "english_name": "Office paper",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Giấy văn phòng gồm giấy in, giấy viết, bản nháp và tài liệu giấy thông thường. Hình ảnh không thể biết giấy có chứa thông tin riêng tư hay không.",
+    "common_materials": "Chủ yếu là sợi giấy; có thể có mực in, ghim, kẹp, băng dính hoặc lớp phủ.",
+    "why_group": "Giấy sạch và khô thường được thu hồi làm giấy tái chế. Giấy nhiệt, giấy phủ nhựa hoặc giấy nhiễm bẩn có thể không được tiếp nhận.",
+    "preparation_steps": [
+      "Tách ghim/kẹp lớn nếu điểm thu gom yêu cầu.",
+      "Không để giấy bị ướt hoặc dính thức ăn/dầu.",
+      "Hủy thông tin cá nhân nhạy cảm theo quy trình phù hợp trước khi tái chế."
+    ],
+    "disposal_steps": [
+      "Thu gom trong dòng giấy sạch và khô.",
+      "Tách giấy nhiệt, giấy phủ nhựa hoặc giấy có lớp laminate nếu nơi thu gom yêu cầu."
+    ],
+    "reuse_options": [
+      "Dùng mặt còn trắng làm giấy nháp nếu không chứa thông tin nhạy cảm."
+    ],
+    "safety_notes": [
+      "Không đốt giấy.",
+      "Không đưa tài liệu chứa dữ liệu cá nhân ra ngoài khi chưa xử lý bảo mật."
+    ],
+    "local_variation": "Một số nơi nhận giấy in hỗn hợp, nơi khác yêu cầu tách giấy nhiệt hoặc giấy phủ; kiểm tra hướng dẫn.",
+    "keywords": [
+      "giấy văn phòng",
+      "giấy in",
+      "giấy viết",
+      "office paper"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Thu gom trong dòng giấy sạch và khô. Tách giấy nhiệt, giấy phủ nhựa hoặc giấy có lớp laminate nếu nơi thu gom yêu cầu."
+  },
+  "paper_cups": {
+    "name": "Cốc giấy",
+    "english_name": "Paper cup",
+    "group_name": "Cần kiểm tra",
+    "what_it_is": "Cốc giấy dùng một lần thường được thiết kế để giữ chất lỏng. Nhiều mẫu có lớp phủ chống thấm bên trong nên không giống giấy văn phòng.",
+    "common_materials": "Giấy bìa kết hợp lớp phủ polymer hoặc lớp lót; nắp có thể bằng nhựa.",
+    "why_group": "Vì cấu tạo nhiều lớp, cốc giấy chỉ tái chế được ở cơ sở có công nghệ tách lớp phù hợp. Không nên mặc định cốc nào cũng bỏ chung với giấy.",
+    "preparation_steps": [
+      "Đổ hết chất lỏng.",
+      "Tách nắp và ống hút nếu có.",
+      "Không cần rửa sâu trừ khi điểm thu gom yêu cầu."
+    ],
+    "disposal_steps": [
+      "Hỏi điểm thu gom có nhận cốc giấy phủ chống thấm hay không.",
+      "Nếu không có dòng thu gom phù hợp, phân loại theo hướng dẫn rác còn lại tại địa phương."
+    ],
+    "reuse_options": [
+      "Ưu tiên dùng cốc tái sử dụng thay cho cốc dùng một lần."
+    ],
+    "safety_notes": [
+      "Không dùng lại cốc giấy dùng một lần đã mềm, rách hoặc mất vệ sinh.",
+      "Không đốt cốc có lớp phủ."
+    ],
+    "local_variation": "Cần xác nhận riêng với cơ sở tái chế vì cốc giấy nhiều lớp không được mọi nơi tiếp nhận.",
+    "keywords": [
+      "cốc giấy",
+      "ly giấy",
+      "paper cup",
+      "ly cafe giấy"
+    ],
+    "group": "check",
+    "disposal_advice": "Hỏi điểm thu gom có nhận cốc giấy phủ chống thấm hay không. Nếu không có dòng thu gom phù hợp, phân loại theo hướng dẫn rác còn lại tại địa phương."
+  },
+  "pcb": {
+    "name": "Bo mạch điện tử",
+    "english_name": "Printed circuit board (PCB)",
+    "group_name": "Rác điện tử",
+    "what_it_is": "PCB là bảng mạch in làm nền kết nối linh kiện điện tử trong máy tính, điện thoại, thiết bị gia dụng và nhiều sản phẩm khác.",
+    "common_materials": "Vật liệu nền composite, đường dẫn đồng, linh kiện hàn và một số kim loại/vật liệu khác.",
+    "why_group": "Bo mạch là rác điện tử phức hợp có thể chứa vật liệu cần thu hồi bằng quy trình chuyên môn. Không phải kim loại phế liệu thông thường và không nên tự tháo hoặc đốt.",
+    "preparation_steps": [
+      "Giữ nguyên bo mạch, tránh làm vỡ hoặc tạo bụi.",
+      "Nếu bo mạch còn nằm trong thiết bị, giao thiết bị cho đơn vị thu gom rác điện tử."
+    ],
+    "disposal_steps": [
+      "Đưa đến đơn vị/điểm thu gom rác điện tử có khả năng tiếp nhận bo mạch.",
+      "Không bỏ vào thùng nhựa, kim loại hoặc rác sinh hoạt."
+    ],
+    "reuse_options": [
+      "Linh kiện chỉ nên được thu hồi/tái sử dụng bởi người có chuyên môn và thiết bị phù hợp."
+    ],
+    "safety_notes": [
+      "Không đốt, nghiền, cạo mạch hoặc dùng hóa chất để tách kim loại.",
+      "Tránh chạm vào phần hư hỏng, rò rỉ hoặc có bụi lạ."
+    ],
+    "local_variation": "Chọn đơn vị xử lý rác điện tử có quy trình kiểm soát môi trường; không tự xử lý tại nhà.",
+    "keywords": [
+      "bo mạch",
+      "bảng mạch",
+      "pcb",
+      "printed circuit board"
+    ],
+    "group": "e_waste",
+    "disposal_advice": "Đưa đến đơn vị/điểm thu gom rác điện tử có khả năng tiếp nhận bo mạch. Không bỏ vào thùng nhựa, kim loại hoặc rác sinh hoạt."
+  },
+  "plastic_cup_lids": {
+    "name": "Nắp cốc nhựa",
+    "english_name": "Plastic cup lid",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Nắp cốc nhựa là bộ phận đậy miệng cốc, thường có lỗ cho ống hút hoặc phần uống trực tiếp.",
+    "common_materials": "Có thể là PET, PP, PS hoặc loại nhựa khác; hình ảnh không đủ để xác định polymer chắc chắn.",
+    "why_group": "Khả năng tái chế phụ thuộc loại nhựa, kích thước, độ sạch và cơ sở tiếp nhận. Nắp nhỏ có thể bị bỏ sót trong một số dây chuyền phân loại.",
+    "preparation_steps": [
+      "Gạt bỏ chất lỏng và cặn thức uống.",
+      "Tách nắp khỏi cốc nếu cần.",
+      "Kiểm tra ký hiệu nhựa nếu có."
+    ],
+    "disposal_steps": [
+      "Đưa vào dòng nhựa chỉ khi điểm thu gom nhận loại nắp này.",
+      "Nếu không chắc, hỏi cơ sở tiếp nhận; không trộn vào giấy."
+    ],
+    "reuse_options": [
+      "Ưu tiên dùng nắp/cốc tái sử dụng hoặc mang bình cá nhân."
+    ],
+    "safety_notes": [
+      "Không đốt hoặc làm nóng nắp nhựa.",
+      "Không dùng lại nắp nứt, biến dạng hoặc không bảo đảm vệ sinh."
+    ],
+    "local_variation": "Không có quy tắc chung cho mọi loại nắp; cơ sở tái chế có thể yêu cầu bỏ riêng hoặc không nhận.",
+    "keywords": [
+      "nắp cốc",
+      "nắp ly",
+      "nắp nhựa",
+      "plastic cup lid"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Đưa vào dòng nhựa chỉ khi điểm thu gom nhận loại nắp này. Nếu không chắc, hỏi cơ sở tiếp nhận; không trộn vào giấy."
+  },
+  "plastic_detergent_bottles": {
+    "name": "Chai nhựa đựng chất tẩy rửa",
+    "english_name": "Plastic detergent bottle",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Đây là chai nhựa đựng nước giặt, nước rửa chén hoặc sản phẩm vệ sinh gia dụng. Chai có thể còn cặn hóa chất.",
+    "common_materials": "Thân chai thường là HDPE hoặc loại nhựa khác; nắp, vòi bơm và nhãn có thể khác vật liệu.",
+    "why_group": "Một số chai có thể tái chế sau khi được làm rỗng và chuẩn bị đúng cách; cặn hóa chất và phụ kiện nhiều vật liệu cần được xử lý theo hướng dẫn.",
+    "preparation_steps": [
+      "Đọc nhãn để biết cảnh báo sản phẩm.",
+      "Không trộn chất còn dư với sản phẩm khác.",
+      "Chỉ tráng nếu nhãn và quy định địa phương cho phép; không dùng tay tiếp xúc với hóa chất."
+    ],
+    "disposal_steps": [
+      "Đóng nắp tạm thời và hỏi điểm thu gom nếu còn nhiều hóa chất.",
+      "Chai rỗng, sạch được tiếp nhận có thể đưa vào dòng nhựa phù hợp."
+    ],
+    "reuse_options": [
+      "Chỉ tái sử dụng làm đúng mục đích phù hợp và sau khi vệ sinh an toàn; không chuyển sang đựng đồ ăn/uống."
+    ],
+    "safety_notes": [
+      "Không trộn các hóa chất tẩy rửa với nhau.",
+      "Không đổ hóa chất đậm đặc xuống cống hoặc đất nếu nhãn không hướng dẫn.",
+      "Tránh tiếp xúc mắt/da với phần còn dư."
+    ],
+    "local_variation": "Chai nhựa chỉ nên tái chế khi điểm thu gom nhận loại nhựa và tình trạng bao bì; chất tẩy rửa còn dư có thể cần tiếp nhận riêng.",
+    "keywords": [
+      "chai nước giặt",
+      "chai nước rửa chén",
+      "chai chất tẩy rửa",
+      "detergent bottle"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Đóng nắp tạm thời và hỏi điểm thu gom nếu còn nhiều hóa chất. Chai rỗng, sạch được tiếp nhận có thể đưa vào dòng nhựa phù hợp."
+  },
+  "plastic_food_containers": {
+    "name": "Hộp nhựa đựng thực phẩm",
+    "english_name": "Plastic food container",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Hộp nhựa thực phẩm là hộp cứng hoặc bán cứng dùng chứa đồ ăn mang đi, thực phẩm bảo quản hoặc nguyên liệu.",
+    "common_materials": "Có thể là PP, PET, HDPE hoặc nhựa khác; có thể có nắp, tem, màng niêm phong và lớp ghép.",
+    "why_group": "Khả năng tái chế phụ thuộc loại nhựa và tình trạng sạch. Hộp nhiều lớp, dính dầu mỡ hoặc làm từ vật liệu không được cơ sở nhận có thể không tái chế được.",
+    "preparation_steps": [
+      "Gạt bỏ thức ăn và rửa/tráng sơ khi có thể.",
+      "Tách nắp nếu khác vật liệu hoặc điểm thu gom yêu cầu.",
+      "Để khô và kiểm tra ký hiệu nhựa."
+    ],
+    "disposal_steps": [
+      "Đưa vào dòng thu gom nhựa được cơ sở tiếp nhận.",
+      "Hộp quá bẩn, dính dầu mỡ hoặc không rõ vật liệu cần hỏi nơi thu gom."
+    ],
+    "reuse_options": [
+      "Dùng lại nếu hộp được thiết kế tái sử dụng, không nứt, không biến dạng và còn an toàn cho thực phẩm."
+    ],
+    "safety_notes": [
+      "Không hâm nóng hộp không có ký hiệu phù hợp.",
+      "Không tái sử dụng hộp dùng một lần bị nứt, xước sâu hoặc biến dạng."
+    ],
+    "local_variation": "Ký hiệu nhựa và quy định tiếp nhận có thể khác nhau; không phải mọi hộp nhựa đều tái chế được tại mọi nơi.",
+    "keywords": [
+      "hộp nhựa",
+      "hộp đựng thức ăn",
+      "plastic food container",
+      "hộp cơm nhựa"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Đưa vào dòng thu gom nhựa được cơ sở tiếp nhận. Hộp quá bẩn, dính dầu mỡ hoặc không rõ vật liệu cần hỏi nơi thu gom."
+  },
+  "plastic_shopping_bags": {
+    "name": "Túi mua sắm bằng nhựa",
+    "english_name": "Plastic shopping bag",
+    "group_name": "Cần kiểm tra",
+    "what_it_is": "Túi mua sắm nhựa là túi mỏng dùng đựng hàng hóa. Một số túi rất nhẹ, dễ cuốn vào máy móc của dây chuyền phân loại.",
+    "common_materials": "Thường là polyethylene (LDPE/HDPE) hoặc vật liệu pha; không thể xác định chắc chắn chỉ bằng ảnh.",
+    "why_group": "Một số điểm thu gom chuyên nhận túi nhựa sạch, khô; nhiều hệ thống phân loại tại cơ sở không nhận túi mỏng vì dễ mắc kẹt thiết bị.",
+    "preparation_steps": [
+      "Làm rỗng túi và loại bỏ thức ăn/chất bẩn.",
+      "Giữ túi khô và gom gọn.",
+      "Không cho túi bẩn hoặc ướt vào bao nhựa sạch."
+    ],
+    "disposal_steps": [
+      "Ưu tiên tái sử dụng túi còn tốt.",
+      "Chỉ đưa đến điểm thu gom chuyên nhận túi nhựa mềm; không mặc định bỏ vào thùng nhựa hỗn hợp."
+    ],
+    "reuse_options": [
+      "Dùng lại khi túi sạch, còn nguyên và phù hợp tải trọng.",
+      "Mang túi dùng nhiều lần khi mua sắm."
+    ],
+    "safety_notes": [
+      "Không dùng túi đã bẩn hóa chất để đựng thực phẩm.",
+      "Không đốt túi nilon."
+    ],
+    "local_variation": "Đây là loại cần kiểm tra chương trình thu gom cụ thể; hướng dẫn khác nhau đáng kể giữa các địa phương.",
+    "keywords": [
+      "túi nilon",
+      "túi mua sắm",
+      "plastic shopping bag",
+      "túi nhựa"
+    ],
+    "group": "check",
+    "disposal_advice": "Ưu tiên tái sử dụng túi còn tốt. Chỉ đưa đến điểm thu gom chuyên nhận túi nhựa mềm; không mặc định bỏ vào thùng nhựa hỗn hợp."
+  },
+  "plastic_soda_bottles": {
+    "name": "Chai nhựa đựng nước ngọt",
+    "english_name": "Plastic soda bottle",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Chai nhựa nước ngọt thường là chai dùng cho nước có ga, nước ngọt hoặc đồ uống đóng chai.",
+    "common_materials": "Thân chai thường là PET; nắp thường là loại nhựa khác và nhãn có thể là màng nhựa.",
+    "why_group": "Chai PET sạch, rỗng thường được nhiều chương trình thu gom tiếp nhận. Nắp và nhãn cần xử lý theo quy định cơ sở.",
+    "preparation_steps": [
+      "Đổ hết chất lỏng và tráng sơ nếu dính đường.",
+      "Để ráo.",
+      "Giữ nắp riêng nếu chương trình thu gom yêu cầu."
+    ],
+    "disposal_steps": [
+      "Đưa vào điểm thu gom chai PET/nhựa được tiếp nhận.",
+      "Không bỏ chai còn đầy chất lỏng hoặc dính rác thực phẩm vào dòng tái chế sạch."
+    ],
+    "reuse_options": [
+      "Có thể tái sử dụng ngắn hạn chỉ khi chai còn nguyên và phù hợp; ưu tiên bình dùng nhiều lần thay cho chai dùng một lần."
+    ],
+    "safety_notes": [
+      "Không dùng chai dùng một lần để đựng hóa chất.",
+      "Không để chai nhựa nóng lâu hoặc biến dạng rồi tiếp tục dùng cho đồ uống."
+    ],
+    "local_variation": "Một số chương trình thu gom yêu cầu giữ nắp, một số yêu cầu tách; làm theo hướng dẫn điểm tiếp nhận.",
+    "keywords": [
+      "chai nước ngọt",
+      "chai soda",
+      "chai nhựa",
+      "plastic soda bottle"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Đưa vào điểm thu gom chai PET/nhựa được tiếp nhận. Không bỏ chai còn đầy chất lỏng hoặc dính rác thực phẩm vào dòng tái chế sạch."
+  },
+  "plastic_straws": {
+    "name": "Ống hút nhựa",
+    "english_name": "Plastic straw",
+    "group_name": "Rác còn lại",
+    "what_it_is": "Ống hút nhựa là ống mảnh dùng uống đồ uống. Kích thước nhỏ khiến chúng thường khó được phân loại và thu hồi trong hệ thống tái chế thông thường.",
+    "common_materials": "Có thể là PP, PS hoặc vật liệu nhựa khác; thường nhẹ, nhỏ và dễ lẫn vào rác khác.",
+    "why_group": "Nhiều chương trình không nhận ống hút do kích thước và nguy cơ lọt qua thiết bị phân loại, dù polymer có thể thuộc loại nhựa tái chế trong điều kiện phù hợp.",
+    "preparation_steps": [
+      "Gạt bỏ chất lỏng hoặc cặn.",
+      "Không cần rửa sâu nếu không có chương trình thu gom riêng."
+    ],
+    "disposal_steps": [
+      "Hỏi điểm thu gom có nhận ống hút hay không.",
+      "Nếu không có chương trình riêng, bỏ theo dòng rác còn lại."
+    ],
+    "reuse_options": [
+      "Ưu tiên không dùng ống hút dùng một lần hoặc sử dụng loại tái sử dụng có thể vệ sinh đúng cách."
+    ],
+    "safety_notes": [
+      "Không đốt ống hút.",
+      "Không để ống hút nhỏ ở nơi trẻ nhỏ hoặc vật nuôi có thể nuốt."
+    ],
+    "local_variation": "Không mặc định mọi loại nhựa đều được tái chế; kiểm tra chính sách tiếp nhận tại địa phương.",
+    "keywords": [
+      "ống hút",
+      "ống hút nhựa",
+      "plastic straw"
+    ],
+    "group": "residual",
+    "disposal_advice": "Hỏi điểm thu gom có nhận ống hút hay không. Nếu không có chương trình riêng, bỏ theo dòng rác còn lại."
+  },
+  "plastic_trash_bags": {
+    "name": "Túi đựng rác bằng nhựa",
+    "english_name": "Plastic trash bag",
+    "group_name": "Rác còn lại",
+    "what_it_is": "Túi rác nhựa dùng lót thùng hoặc chứa chất thải. Sau sử dụng, túi thường có thể dính chất bẩn và không còn phù hợp tái chế.",
+    "common_materials": "Thường là màng polyetylen; có thể pha phụ gia tạo màu hoặc tăng độ bền.",
+    "why_group": "Túi đã dùng để đựng rác thường nhiễm bẩn và không thể đưa trực tiếp vào dòng tái chế sạch. Một số túi sạch, chưa dùng có thể có chương trình thu gom riêng.",
+    "preparation_steps": [
+      "Không mở túi rác đã chứa vật sắc nhọn hoặc chất thải không rõ nguồn gốc.",
+      "Buộc kín theo quy định thu gom rác sinh hoạt."
+    ],
+    "disposal_steps": [
+      "Đưa vào dòng rác sinh hoạt phù hợp nếu túi đã bẩn.",
+      "Túi sạch chưa dùng chỉ thu gom riêng nếu địa phương có chương trình nhận túi mềm."
+    ],
+    "reuse_options": [
+      "Dùng túi bền hơn hoặc giảm sử dụng túi dùng một lần khi có thể."
+    ],
+    "safety_notes": [
+      "Không nén hoặc ép túi khi bên trong có vật sắc nhọn.",
+      "Không đốt túi nhựa."
+    ],
+    "local_variation": "Túi rác đã sử dụng khác với túi mua sắm sạch; cần xử lý dựa trên tình trạng thực tế.",
+    "keywords": [
+      "túi rác",
+      "túi đựng rác",
+      "plastic trash bag"
+    ],
+    "group": "residual",
+    "disposal_advice": "Đưa vào dòng rác sinh hoạt phù hợp nếu túi đã bẩn. Túi sạch chưa dùng chỉ thu gom riêng nếu địa phương có chương trình nhận túi mềm."
+  },
+  "plastic_water_bottles": {
+    "name": "Chai nước uống bằng nhựa",
+    "english_name": "Plastic water bottle",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Chai nước nhựa dùng một lần thường dùng chứa nước uống tinh khiết hoặc nước khoáng.",
+    "common_materials": "Thân chai thường là PET; nắp và vòng niêm phong có thể là loại nhựa khác.",
+    "why_group": "Chai PET sạch, rỗng thường được thu gom tái chế. Việc tách nắp, nhãn và ép dẹp phụ thuộc yêu cầu nơi tiếp nhận.",
+    "preparation_steps": [
+      "Đổ hết nước.",
+      "Tráng sơ nếu còn cặn và để ráo.",
+      "Kiểm tra hướng dẫn về nắp và nhãn trước khi ép dẹp."
+    ],
+    "disposal_steps": [
+      "Đưa vào điểm thu gom chai nhựa/PET.",
+      "Giữ tách khỏi rác thực phẩm, chất lỏng và hóa chất."
+    ],
+    "reuse_options": [
+      "Ưu tiên dùng bình nước tái sử dụng thay cho chai dùng một lần."
+    ],
+    "safety_notes": [
+      "Không dùng chai đã biến dạng, trầy xước sâu hoặc không còn vệ sinh để đựng nước lâu dài.",
+      "Không dùng chai nước uống để đựng hóa chất."
+    ],
+    "local_variation": "Một số chương trình yêu cầu nắp đi kèm chai; hãy theo chỉ dẫn nơi thu gom.",
+    "keywords": [
+      "chai nước",
+      "chai nhựa nước suối",
+      "plastic water bottle",
+      "chai PET"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Đưa vào điểm thu gom chai nhựa/PET. Giữ tách khỏi rác thực phẩm, chất lỏng và hóa chất."
+  },
+  "potato_peel": {
+    "name": "Vỏ khoai tây",
+    "english_name": "Potato peel",
+    "group_name": "Rác hữu cơ",
+    "what_it_is": "Vỏ khoai tây là phần vỏ thực vật được loại bỏ khi sơ chế khoai. Nó là rác thực phẩm có thể phân hủy sinh học.",
+    "common_materials": "Mô thực vật, nước, tinh bột và chất xơ.",
+    "why_group": "Vỏ khoai tây có thể vào hệ thống rác thực phẩm/compost nếu cơ sở tiếp nhận; cần tách khỏi túi nilon, tem và bao bì.",
+    "preparation_steps": [
+      "Tách khỏi bao bì và vật liệu không phân hủy.",
+      "Để ráo nếu quá ướt."
+    ],
+    "disposal_steps": [
+      "Đưa vào thùng hữu cơ/compost nếu chương trình nhận vỏ rau củ.",
+      "Nếu không, xử lý theo quy định rác sinh hoạt địa phương."
+    ],
+    "reuse_options": [
+      "Có thể ủ compost trong hệ thống phù hợp; không để lượng lớn vỏ ướt tích tụ trong thùng kín quá lâu."
+    ],
+    "safety_notes": [
+      "Không sử dụng phần vỏ đã mốc hoặc hư hỏng làm thức ăn.",
+      "Rửa tay sau khi xử lý rác thực phẩm."
+    ],
+    "local_variation": "Khả năng thu gom phụ thuộc hệ thống hữu cơ tại địa phương.",
+    "keywords": [
+      "vỏ khoai tây",
+      "potato peel",
+      "vỏ khoai"
+    ],
+    "group": "organic",
+    "disposal_advice": "Đưa vào thùng hữu cơ/compost nếu chương trình nhận vỏ rau củ. Nếu không, xử lý theo quy định rác sinh hoạt địa phương."
+  },
+  "shoes": {
+    "name": "Giày dép",
+    "english_name": "Shoes",
+    "group_name": "Ưu tiên tái sử dụng",
+    "what_it_is": "Giày dép là sản phẩm bảo vệ bàn chân, thường gồm đế, thân, lót, dây và keo liên kết nhiều vật liệu.",
+    "common_materials": "Có thể gồm cao su, EVA, PU, da, vải, nhựa, kim loại và keo; hỗn hợp này khiến tái chế phức tạp.",
+    "why_group": "Giày còn sử dụng được nên ưu tiên sửa chữa hoặc quyên góp. Giày hỏng thường cần chương trình thu gom giày dép/dệt may chuyên biệt.",
+    "preparation_steps": [
+      "Làm sạch bụi bẩn và để khô.",
+      "Ghép thành đôi và kiểm tra tình trạng."
+    ],
+    "disposal_steps": [
+      "Tặng/quyên góp nếu còn sạch, nguyên vẹn và có nơi tiếp nhận.",
+      "Nếu hỏng nặng, tìm chương trình thu gom giày dép hoặc xử lý theo quy định địa phương."
+    ],
+    "reuse_options": [
+      "Thay dây, lót hoặc sửa đế khi khả thi.",
+      "Dùng lại cho mục đích phù hợp nếu vẫn an toàn."
+    ],
+    "safety_notes": [
+      "Không quyên góp giày mốc, nhiễm hóa chất hoặc hư hỏng có thể gây chấn thương."
+    ],
+    "local_variation": "Giày dép không nên bỏ vào thùng giấy/nhựa tái chế; cần chương trình nhận riêng nếu không còn dùng được.",
+    "keywords": [
+      "giày",
+      "dép",
+      "shoes",
+      "sneaker"
+    ],
+    "group": "reuse",
+    "disposal_advice": "Tặng/quyên góp nếu còn sạch, nguyên vẹn và có nơi tiếp nhận. Nếu hỏng nặng, tìm chương trình thu gom giày dép hoặc xử lý theo quy định địa phương."
+  },
+  "steel_food_cans": {
+    "name": "Lon thép đựng thực phẩm",
+    "english_name": "Steel food can",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Lon thép thực phẩm là hộp kim loại dùng đựng thực phẩm đóng hộp. Một số lon có lớp mạ thiếc hoặc lớp phủ bên trong.",
+    "common_materials": "Thép mỏng, có thể được phủ thiếc hoặc lớp bảo vệ; nắp có thể có cạnh sắc.",
+    "why_group": "Thép là vật liệu có thể thu hồi; lon sạch, rỗng giúp giảm nhiễm bẩn trong dòng kim loại.",
+    "preparation_steps": [
+      "Đổ hết thức ăn.",
+      "Tráng sơ và để ráo nếu cần.",
+      "Không ép bằng tay vì mép lon có thể sắc."
+    ],
+    "disposal_steps": [
+      "Thu gom cùng dòng lon kim loại nếu điểm tiếp nhận nhận thép.",
+      "Tách nắp hoặc bộ phận khác nếu hướng dẫn yêu cầu."
+    ],
+    "reuse_options": [
+      "Tái sử dụng làm hộp lưu trữ chỉ sau khi đã xử lý cạnh sắc an toàn bởi người lớn."
+    ],
+    "safety_notes": [
+      "Không chạm tay vào mép cắt.",
+      "Không giữ lon có hóa chất hoặc vật liệu không rõ nguồn gốc như lon thực phẩm sạch."
+    ],
+    "local_variation": "Một số điểm phân loại riêng thép và nhôm; model chỉ xác định nhóm lon, người dùng nên kiểm tra ký hiệu/nam châm hoặc hỏi nơi thu gom.",
+    "keywords": [
+      "lon thép",
+      "lon thực phẩm",
+      "steel can",
+      "tin can"
+    ],
+    "group": "recyclable",
+    "disposal_advice": "Thu gom cùng dòng lon kim loại nếu điểm tiếp nhận nhận thép. Tách nắp hoặc bộ phận khác nếu hướng dẫn yêu cầu."
+  },
+  "styrofoam_cups": {
+    "name": "Cốc xốp",
+    "english_name": "Styrofoam cup",
+    "group_name": "Rác còn lại",
+    "what_it_is": "Cốc xốp là cốc nhẹ dùng một lần, thường làm từ polystyrene dạng bọt. Vật liệu dễ vỡ vụn và nhẹ.",
+    "common_materials": "Thường là expanded polystyrene (EPS) hoặc loại polystyrene tạo bọt.",
+    "why_group": "EPS cồng kềnh, nhẹ và dễ nhiễm bẩn; không phải mọi chương trình tái chế đều tiếp nhận. Một số nơi có thu gom chuyên biệt.",
+    "preparation_steps": [
+      "Đổ hết chất lỏng và thức ăn.",
+      "Không làm vụn cốc."
+    ],
+    "disposal_steps": [
+      "Hỏi điểm thu gom có chương trình nhận xốp/EPS không.",
+      "Nếu không có, bỏ theo dòng rác còn lại tại địa phương."
+    ],
+    "reuse_options": [
+      "Ưu tiên cốc tái sử dụng hoặc giảm dùng sản phẩm xốp dùng một lần."
+    ],
+    "safety_notes": [
+      "Không đốt hoặc làm nóng xốp.",
+      "Tránh bẻ vụn gây phát tán hạt nhỏ."
+    ],
+    "local_variation": "Chỉ đưa đến điểm thu gom xốp chuyên biệt khi được xác nhận tiếp nhận.",
+    "keywords": [
+      "cốc xốp",
+      "ly xốp",
+      "styrofoam cup",
+      "eps cup"
+    ],
+    "group": "residual",
+    "disposal_advice": "Hỏi điểm thu gom có chương trình nhận xốp/EPS không. Nếu không có, bỏ theo dòng rác còn lại tại địa phương."
+  },
+  "styrofoam_food_containers": {
+    "name": "Hộp thực phẩm xốp",
+    "english_name": "Styrofoam food container",
+    "group_name": "Rác còn lại",
+    "what_it_is": "Hộp thực phẩm xốp là hộp đựng đồ ăn mang đi, thường làm từ polystyrene dạng bọt và dễ dính dầu mỡ.",
+    "common_materials": "Thường là EPS hoặc polystyrene tạo bọt; có thể đi kèm nắp nhựa khác vật liệu.",
+    "why_group": "Hộp xốp dính thức ăn/dầu mỡ thường khó tái chế và nhiều cơ sở không nhận. Một số nơi có quy trình chuyên biệt nếu hộp sạch.",
+    "preparation_steps": [
+      "Gạt bỏ thức ăn và chất lỏng.",
+      "Tách nắp nếu làm từ vật liệu khác.",
+      "Không rửa bằng hóa chất mạnh."
+    ],
+    "disposal_steps": [
+      "Kiểm tra xem nơi thu gom có nhận hộp EPS sạch không.",
+      "Nếu không có, bỏ theo hướng dẫn rác còn lại."
+    ],
+    "reuse_options": [
+      "Giảm sử dụng hộp xốp bằng cách mang hộp dùng nhiều lần nếu phù hợp."
+    ],
+    "safety_notes": [
+      "Không đốt hoặc làm nóng hộp xốp.",
+      "Không dùng lại hộp biến dạng, nứt hoặc đã mất vệ sinh."
+    ],
+    "local_variation": "Hộp xốp không mặc định thuộc dòng nhựa tái chế thông thường; cần xác nhận với điểm thu gom.",
+    "keywords": [
+      "hộp xốp",
+      "hộp cơm xốp",
+      "styrofoam food container"
+    ],
+    "group": "residual",
+    "disposal_advice": "Kiểm tra xem nơi thu gom có nhận hộp EPS sạch không. Nếu không có, bỏ theo hướng dẫn rác còn lại."
+  },
+  "tea_bags": {
+    "name": "Túi trà đã pha",
+    "english_name": "Tea bag",
+    "group_name": "Cần kiểm tra",
+    "what_it_is": "Túi trà là túi lọc nhỏ chứa lá trà sau khi pha. Một số túi làm từ giấy/sợi thực vật, một số có thành phần nhựa hoặc ghim.",
+    "common_materials": "Lá trà hữu cơ, giấy/sợi lọc; có thể có polymer, keo, chỉ và ghim kim loại.",
+    "why_group": "Lá trà có thể compost nhưng túi lọc chỉ phù hợp nếu toàn bộ túi và phụ kiện có thể phân hủy trong hệ thống tiếp nhận.",
+    "preparation_steps": [
+      "Để nguội và vắt nhẹ phần nước thừa nếu phù hợp.",
+      "Tách ghim, dây hoặc nhãn nếu hệ thống compost không nhận.",
+      "Kiểm tra thông tin bao bì về vật liệu túi lọc."
+    ],
+    "disposal_steps": [
+      "Chỉ cho vào compost nếu biết túi lọc không chứa thành phần khó phân hủy và hệ thống chấp nhận.",
+      "Nếu không rõ, tách lá trà khỏi túi hoặc xử lý phần túi theo hướng dẫn địa phương."
+    ],
+    "reuse_options": [
+      "Lá trà đã pha có thể đưa vào compost phù hợp."
+    ],
+    "safety_notes": [
+      "Không compost túi có vật liệu tổng hợp nếu hệ thống không xử lý được.",
+      "Không bỏ túi trà nóng trực tiếp vào túi rác dễ chảy."
+    ],
+    "local_variation": "Túi trà là sản phẩm nhiều cấu tạo khác nhau; không thể kết luận chỉ từ hình dáng bên ngoài.",
+    "keywords": [
+      "túi trà",
+      "tea bag",
+      "bã trà"
+    ],
+    "group": "check",
+    "disposal_advice": "Chỉ cho vào compost nếu biết túi lọc không chứa thành phần khó phân hủy và hệ thống chấp nhận. Nếu không rõ, tách lá trà khỏi túi hoặc xử lý phần túi theo hướng dẫn địa phương."
+  },
+  "wire": {
+    "name": "Dây điện hoặc dây kim loại",
+    "english_name": "Wire",
+    "group_name": "Rác điện tử",
+    "what_it_is": "Dây điện/dây kim loại là vật dẫn điện hoặc liên kết, có thể có lõi đồng/nhôm và lớp bọc cách điện. Ảnh dataset không xác định chắc dây có còn điện hay chỉ là phế liệu.",
+    "common_materials": "Lõi kim loại dẫn điện và lớp cách điện bằng nhựa/cao su; có thể có đầu nối.",
+    "why_group": "Dây có nguồn gốc từ thiết bị điện nên cần xem như rác điện tử hoặc kim loại có lớp bọc. Việc thu hồi kim loại cần đơn vị có thiết bị phù hợp.",
+    "preparation_steps": [
+      "Không chạm vào dây đang nối với nguồn điện hoặc không rõ tình trạng.",
+      "Không cắt, bóc vỏ hoặc đốt dây.",
+      "Cuộn gọn dây đã được xác nhận không còn kết nối với nguồn điện."
+    ],
+    "disposal_steps": [
+      "Đưa đến điểm thu gom rác điện tử/dây cáp.",
+      "Nếu là dây kim loại phế liệu, hỏi cơ sở có nhận dây bọc cách điện hay không."
+    ],
+    "reuse_options": [
+      "Dây còn tốt có thể tiếp tục dùng cho thiết bị tương thích; không dùng dây sờn hoặc hỏng."
+    ],
+    "safety_notes": [
+      "Không tự tháo dây khỏi hệ thống điện đang hoạt động.",
+      "Không đốt lớp vỏ để lấy lõi kim loại.",
+      "Nếu không rõ dây có điện hay không, không chạm và nhờ người lớn/thợ điện kiểm tra."
+    ],
+    "local_variation": "Cần phân biệt dây điện đang sử dụng, dây cáp điện tử và dây kim loại phế liệu; AI chỉ dự đoán loại gần nhất từ ảnh.",
+    "keywords": [
+      "dây điện",
+      "dây kim loại",
+      "wire",
+      "dây đồng"
+    ],
+    "group": "e_waste",
+    "disposal_advice": "Đưa đến điểm thu gom rác điện tử/dây cáp. Nếu là dây kim loại phế liệu, hỏi cơ sở có nhận dây bọc cách điện hay không."
+  }
+}
