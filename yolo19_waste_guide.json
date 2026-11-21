@@ -1,0 +1,625 @@
+{
+  "aluminumCan_awss": {
+    "name": "Lon nhôm",
+    "english_name": "Aluminum can",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Lon kim loại mỏng thường dùng để đựng đồ uống hoặc thực phẩm đóng hộp. Model gọi riêng nhãn này là lon nhôm; ảnh không xác định được lon còn chứa sản phẩm hay đã qua sử dụng.",
+    "common_materials": "Thường là hợp kim nhôm; có thể có lớp phủ bên trong và nắp kim loại.",
+    "why_group": "Nhôm có giá trị thu hồi và có thể tái chế khi được cơ sở tiếp nhận. Cặn thức ăn/nước uống làm bẩn các vật liệu khác nên cần làm sạch sơ bộ.",
+    "preparation_steps": [
+      "Đổ hết chất lỏng hoặc thức ăn còn lại.",
+      "Tráng sơ nếu có cặn bẩn, sau đó để ráo.",
+      "Không cố bóp méo lon nếu điểm thu gom yêu cầu giữ nguyên hình dạng."
+    ],
+    "disposal_steps": [
+      "Đưa vào điểm thu gom lon/kim loại hoặc bao bì tái chế có tiếp nhận nhôm.",
+      "Giữ riêng với rác hữu cơ và rác còn lại."
+    ],
+    "reuse_options": [
+      "Có thể giữ lại để tái sử dụng làm hộp chứa đồ khô sau khi làm sạch; cần xử lý cạnh sắc an toàn."
+    ],
+    "safety_notes": [
+      "Cạnh lon hoặc nắp có thể sắc; tránh miết tay vào mép cắt.",
+      "Không tự xử lý lon chứa hóa chất hoặc vật liệu không rõ nguồn gốc."
+    ],
+    "local_variation": "Một số nơi phân riêng nhôm và thép; nơi khác nhận chung kim loại. Hãy theo hướng dẫn của điểm thu gom.",
+    "keywords": [
+      "lon nhôm",
+      "lon nước",
+      "aluminum can",
+      "can"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Đưa vào điểm thu gom lon/kim loại hoặc bao bì tái chế có tiếp nhận nhôm. Giữ riêng với rác hữu cơ và rác còn lại."
+  },
+  "aluminumFoil_awss": {
+    "name": "Giấy bạc nhôm",
+    "english_name": "Aluminum foil",
+    "group_name": "Cần kiểm tra",
+    "what_it_is": "Lá nhôm rất mỏng dùng bọc, nướng hoặc bảo quản thực phẩm. Model nhận dạng giấy bạc nhưng không đánh giá được mức độ dính dầu mỡ hay thức ăn.",
+    "common_materials": "Nhôm cán thành lá mỏng; đôi khi có lớp ghép với giấy hoặc nhựa ở bao bì khác.",
+    "why_group": "Giấy bạc sạch, khô có thể được một số cơ sở thu hồi kim loại tiếp nhận; loại dính nhiều thức ăn/dầu mỡ thường khó tái chế trong dòng thông thường.",
+    "preparation_steps": [
+      "Gỡ bỏ phần thức ăn còn bám nếu dễ thực hiện.",
+      "Không tốn quá nhiều nước để rửa một mảnh giấy bạc nhỏ.",
+      "Nếu là bao bì nhiều lớp, kiểm tra ký hiệu vật liệu thay vì mặc định là nhôm thuần."
+    ],
+    "disposal_steps": [
+      "Chỉ đưa vào thu gom kim loại khi điểm thu gom xác nhận có nhận giấy bạc.",
+      "Nếu bẩn nặng hoặc không có điểm tiếp nhận, bỏ theo hướng dẫn rác còn lại tại địa phương."
+    ],
+    "reuse_options": [
+      "Có thể tái sử dụng miếng còn sạch và nguyên vẹn cho mục đích phù hợp; không dùng lại miếng bẩn hoặc hư hỏng."
+    ],
+    "safety_notes": [
+      "Tránh để cạnh giấy bạc rách cứa vào tay.",
+      "Không đốt giấy bạc hoặc bao bì để xử lý."
+    ],
+    "local_variation": "Khả năng tiếp nhận giấy bạc khác nhau nhiều giữa các hệ thống tái chế.",
+    "keywords": [
+      "giấy bạc",
+      "lá nhôm",
+      "aluminum foil",
+      "foil"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Chỉ đưa vào thu gom kim loại khi điểm thu gom xác nhận có nhận giấy bạc. Nếu bẩn nặng hoặc không có điểm tiếp nhận, bỏ theo hướng dẫn rác còn lại tại địa phương."
+  },
+  "apple_awss": {
+    "name": "Quả táo",
+    "english_name": "Apple",
+    "group_name": "Rác hữu cơ",
+    "what_it_is": "Quả táo là thực phẩm có nguồn gốc thực vật. Nhãn này nhận diện quả táo, không khẳng định táo đã hỏng hay còn ăn được.",
+    "common_materials": "Mô thực vật, nước, đường tự nhiên và vỏ quả.",
+    "why_group": "Khi táo bị loại bỏ, phần quả và vỏ thường có thể đi vào dòng rác thực phẩm/ủ hữu cơ nếu hệ thống địa phương tiếp nhận.",
+    "preparation_steps": [
+      "Nếu còn dùng được, ưu tiên sử dụng làm thực phẩm thay vì bỏ đi.",
+      "Nếu đã bỏ đi, tách khỏi túi nilon, tem nhựa và bao bì."
+    ],
+    "disposal_steps": [
+      "Cho vào thùng rác thực phẩm hoặc hệ thống compost được quản lý.",
+      "Không bỏ lẫn túi nhựa, màng bọc hoặc vật liệu không phân hủy."
+    ],
+    "reuse_options": [
+      "Có thể dùng làm thực phẩm hoặc chế biến khi còn an toàn; phần bỏ đi có thể compost nếu phù hợp."
+    ],
+    "safety_notes": [
+      "Không ăn thực phẩm đã ôi hỏng hoặc bị nhiễm bẩn.",
+      "Rửa tay sau khi xử lý rác thực phẩm."
+    ],
+    "local_variation": "Một số chương trình compost chỉ nhận thức ăn thực vật; cần kiểm tra hướng dẫn địa phương.",
+    "keywords": [
+      "táo",
+      "quả táo",
+      "apple",
+      "fruit"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Cho vào thùng rác thực phẩm hoặc hệ thống compost được quản lý. Không bỏ lẫn túi nhựa, màng bọc hoặc vật liệu không phân hủy."
+  },
+  "banana_awss": {
+    "name": "Chuối hoặc vỏ chuối",
+    "english_name": "Banana / banana peel",
+    "group_name": "Rác hữu cơ",
+    "what_it_is": "Nhãn nguồn bao gồm quả chuối hoặc vỏ chuối; checkpoint không phân biệt chắc chắn quả nguyên hay chỉ phần vỏ. Khi vật này được thải bỏ, nó thuộc nhóm rác thực phẩm có nguồn gốc thực vật.",
+    "common_materials": "Mô thực vật và vỏ giàu chất xơ, độ ẩm.",
+    "why_group": "Chuối và vỏ chuối thường phân hủy sinh học và có thể được xử lý cùng rác thực phẩm trong hệ thống hữu cơ phù hợp.",
+    "preparation_steps": [
+      "Nếu quả còn ăn được, ưu tiên sử dụng hoặc chia sẻ thay vì bỏ.",
+      "Khi thải bỏ, tách vỏ khỏi bao bì, nhãn dán và túi nilon.",
+      "Nếu dính nhiều nilon, tách phần nilon ra trước."
+    ],
+    "disposal_steps": [
+      "Đưa phần chuối/vỏ chuối vào thùng rác hữu cơ hoặc compost được quản lý.",
+      "Không bỏ cả túi nilon vào thùng hữu cơ."
+    ],
+    "reuse_options": [
+      "Quả còn tốt có thể dùng làm thực phẩm; vỏ có thể compost nếu hệ thống tiếp nhận."
+    ],
+    "safety_notes": [
+      "Không ăn phần đã mốc/ôi hoặc bị nhiễm bẩn.",
+      "Rửa tay sau khi xử lý rác thực phẩm."
+    ],
+    "local_variation": "Nhãn model không phân biệt quả và vỏ; nếu cần xác định chính xác phần nào, người dùng nên kiểm tra trực quan.",
+    "keywords": [
+      "chuối",
+      "vỏ chuối",
+      "banana",
+      "banana peel"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Đưa phần chuối/vỏ chuối vào thùng rác hữu cơ hoặc compost được quản lý. Không bỏ cả túi nilon vào thùng hữu cơ."
+  },
+  "battery_awss": {
+    "name": "Pin đã qua sử dụng",
+    "english_name": "Battery",
+    "group_name": "Rác nguy hại",
+    "what_it_is": "Pin là nguồn điện hóa học nhỏ dùng trong đồ gia dụng và thiết bị điện tử. Model chỉ nhận diện vật thể dạng pin; không xác định được hóa học, dung lượng hay tình trạng hư hỏng.",
+    "common_materials": "Có thể chứa kim loại và hóa chất điện hóa; loại pin khác nhau có cấu tạo khác nhau.",
+    "why_group": "Pin không nên trộn với rác sinh hoạt vì có thể rò rỉ hoặc gây sự cố trong quá trình thu gom/xử lý. Cần đưa đến điểm thu gom pin chuyên biệt.",
+    "preparation_steps": [
+      "Giữ pin riêng, khô ráo và tránh làm rơi hoặc va đập.",
+      "Nếu điểm thu gom yêu cầu, cách điện hai cực bằng băng dính không dẫn điện; nhờ người lớn hỗ trợ.",
+      "Không tự tháo rời hoặc mở pin."
+    ],
+    "disposal_steps": [
+      "Đưa đến điểm thu gom pin hoặc chương trình thu hồi thiết bị có nhận pin.",
+      "Không bỏ vào thùng tái chế bao bì thông thường hoặc rác sinh hoạt."
+    ],
+    "reuse_options": [
+      "Không tái sử dụng pin đã hỏng, phồng, rò rỉ hoặc không rõ tình trạng."
+    ],
+    "safety_notes": [
+      "Không đốt, chọc thủng, nghiền, sạc lại pin dùng một lần hoặc mở vỏ pin.",
+      "Nếu pin rò rỉ, nóng bất thường hoặc phồng, không chạm trực tiếp; nhờ người lớn/đơn vị chuyên trách xử lý."
+    ],
+    "local_variation": "Điểm thu gom và quy định có thể khác nhau theo loại pin; xác nhận nơi tiếp nhận trước khi mang đến.",
+    "keywords": [
+      "pin",
+      "battery",
+      "pin tiểu",
+      "pin cúc áo",
+      "pin lithium"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Đưa đến điểm thu gom pin hoặc chương trình thu hồi thiết bị có nhận pin. Không bỏ vào thùng tái chế bao bì thông thường hoặc rác sinh hoạt."
+  },
+  "bolt_awss": {
+    "name": "Bu lông kim loại",
+    "english_name": "Bolt fastener",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Bu lông là chi tiết liên kết có thân ren, thường dùng cùng đai ốc để ghép các bộ phận. Nhãn này là chi tiết cơ khí, không phải rác thực phẩm.",
+    "common_materials": "Thường bằng thép, thép không gỉ hoặc hợp kim; model không xác định chính xác hợp kim.",
+    "why_group": "Kim loại có thể được thu hồi tại cơ sở phế liệu/thu gom kim loại. Cần tách khỏi rác mềm và vật liệu phi kim.",
+    "preparation_steps": [
+      "Nếu còn sử dụng được, tách riêng để tái sử dụng.",
+      "Nếu bỏ đi, gom cùng các chi tiết kim loại nhỏ, tránh để lẫn vào rác hữu cơ."
+    ],
+    "disposal_steps": [
+      "Đưa đến điểm thu gom phế liệu kim loại hoặc đơn vị tiếp nhận kim loại.",
+      "Không tự suy đoán loại hợp kim; cơ sở thu gom sẽ phân loại tiếp."
+    ],
+    "reuse_options": [
+      "Có thể tái sử dụng trong sửa chữa nếu còn nguyên vẹn và phù hợp kích thước/chuẩn kỹ thuật."
+    ],
+    "safety_notes": [
+      "Chi tiết nhỏ có thể có cạnh sắc; tránh để trẻ nhỏ tiếp xúc.",
+      "Không dùng lại bu lông bị nứt, cong hoặc hư hỏng trong kết cấu chịu lực."
+    ],
+    "local_variation": "Một số điểm thu gom chỉ nhận lượng kim loại tối thiểu hoặc yêu cầu phân riêng.",
+    "keywords": [
+      "bu lông",
+      "ốc vít",
+      "bolt",
+      "fastener"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Đưa đến điểm thu gom phế liệu kim loại hoặc đơn vị tiếp nhận kim loại. Không tự suy đoán loại hợp kim; cơ sở thu gom sẽ phân loại tiếp."
+  },
+  "bottle_awss": {
+    "name": "Chai hoặc lọ (chưa xác định vật liệu)",
+    "english_name": "Bottle",
+    "group_name": "Cần kiểm tra",
+    "what_it_is": "Model nhận diện hình dạng chai/lọ nhưng nhãn nguồn không ghi rõ chai làm từ nhựa hay thủy tinh. Vì thế không được tự động kết luận chai nhựa chỉ dựa vào kết quả này.",
+    "common_materials": "Có thể là nhựa, thủy tinh hoặc vật liệu khác; cần xem ký hiệu dưới đáy chai, độ cứng và nhãn sản phẩm.",
+    "why_group": "Cách xử lý phụ thuộc vào vật liệu thực tế. Chai nhựa PET/HDPE, chai thủy tinh và chai chứa hóa chất có quy trình thu gom khác nhau.",
+    "preparation_steps": [
+      "Kiểm tra ký hiệu vật liệu ở đáy chai hoặc nhãn bao bì.",
+      "Đổ hết chất lỏng và xác định chai từng chứa thực phẩm, mỹ phẩm hay hóa chất.",
+      "Tráng sạch nếu là bao bì thực phẩm và quy định điểm thu gom cho phép."
+    ],
+    "disposal_steps": [
+      "Chai nhựa sạch: đưa vào điểm thu gom nhựa phù hợp.",
+      "Chai thủy tinh: thu gom riêng theo quy định, tránh làm vỡ.",
+      "Chai từng chứa hóa chất: hỏi điểm thu gom chuyên biệt, không tự đổ phần dư ra môi trường."
+    ],
+    "reuse_options": [
+      "Có thể tái sử dụng nếu chai được thiết kế cho mục đích đó, sạch và còn nguyên vẹn; không tái dùng bao bì hóa chất cho thực phẩm."
+    ],
+    "safety_notes": [
+      "Không đập vỡ chai để phân loại.",
+      "Nếu chai vỡ hoặc chứa hóa chất không rõ, nhờ người lớn/đơn vị thu gom hỗ trợ."
+    ],
+    "local_variation": "Đây là lớp có hạn chế dữ liệu: nguồn công bố không có ảnh validation cho bottle_awss và chỉ có ít mẫu test. Cần kiểm tra vật liệu bằng mắt trước khi dùng hướng dẫn.",
+    "keywords": [
+      "chai",
+      "lọ",
+      "bottle",
+      "chai nhựa",
+      "chai thủy tinh"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Chai nhựa sạch: đưa vào điểm thu gom nhựa phù hợp. Chai thủy tinh: thu gom riêng theo quy định, tránh làm vỡ. Chai từng chứa hóa chất: hỏi điểm thu gom chuyên biệt, không tự đổ phần dư ra môi trường."
+  },
+  "cigarette_awss": {
+    "name": "Điếu thuốc hoặc đầu lọc thuốc lá",
+    "english_name": "Cigarette / cigarette butt",
+    "group_name": "Rác còn lại",
+    "what_it_is": "Nhãn nguồn bao gồm điếu thuốc hoặc đầu lọc thuốc lá. Đầu lọc đã dùng có thể giữ lại cặn và không nên xem là giấy hay vật liệu compost thông thường.",
+    "common_materials": "Có thể gồm giấy cuốn, thuốc lá và đầu lọc làm từ sợi cellulose acetate hoặc vật liệu khác.",
+    "why_group": "Vật liệu này thường bị bẩn và có thể mang cặn, nên không phù hợp với dòng giấy tái chế hoặc rác hữu cơ thông thường.",
+    "preparation_steps": [
+      "Không nhặt bằng tay trần nếu vật thể đã qua sử dụng và bẩn.",
+      "Nếu đang còn nóng, không bỏ vào thùng dễ cháy; để người lớn xử lý an toàn."
+    ],
+    "disposal_steps": [
+      "Bỏ vào rác còn lại theo hướng dẫn địa phương sau khi đã nguội hoàn toàn.",
+      "Không vứt xuống cống, bồn cây, sân trường hoặc nguồn nước."
+    ],
+    "reuse_options": [
+      "Không có phương án tái sử dụng gia đình được khuyến nghị."
+    ],
+    "safety_notes": [
+      "Tránh tiếp xúc trực tiếp với đầu lọc đã dùng.",
+      "Không đốt hoặc cố tháo rời để tái chế."
+    ],
+    "local_variation": "Quy định xử lý rác thuốc lá có thể khác nhau, nhưng không nên bỏ vào thùng giấy/compost thông thường.",
+    "keywords": [
+      "đầu lọc thuốc lá",
+      "điếu thuốc",
+      "cigarette",
+      "cigarette butt"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Bỏ vào rác còn lại theo hướng dẫn địa phương sau khi đã nguội hoàn toàn. Không vứt xuống cống, bồn cây, sân trường hoặc nguồn nước."
+  },
+  "egg_awss": {
+    "name": "Trứng hoặc vỏ trứng",
+    "english_name": "Egg / eggshell",
+    "group_name": "Rác hữu cơ",
+    "what_it_is": "Nhãn nguồn gộp trứng và vỏ trứng, vì vậy model không luôn phân biệt được quả trứng nguyên với phần vỏ đã bỏ đi.",
+    "common_materials": "Trứng là thực phẩm có nguồn gốc động vật; vỏ trứng chủ yếu là khoáng chất và màng hữu cơ.",
+    "why_group": "Khi bị thải bỏ, trứng và vỏ trứng có thể phù hợp với một số hệ thống thu gom rác thực phẩm/compost; phải theo loại vật liệu được cơ sở tiếp nhận.",
+    "preparation_steps": [
+      "Nếu là trứng còn an toàn, ưu tiên sử dụng thực phẩm thay vì bỏ.",
+      "Nếu thải bỏ, tách khỏi hộp nhựa/xốp và các vật liệu không hữu cơ."
+    ],
+    "disposal_steps": [
+      "Cho vào thùng rác thực phẩm nếu chương trình địa phương nhận trứng và vỏ trứng.",
+      "Nếu địa phương không nhận rác hữu cơ hỗn hợp, theo hướng dẫn rác còn lại."
+    ],
+    "reuse_options": [
+      "Vỏ trứng có thể được nghiền/ủ trong hệ thống compost phù hợp; không cần làm điều này nếu không có quy trình compost."
+    ],
+    "safety_notes": [
+      "Không ăn trứng có dấu hiệu hỏng hoặc bị nhiễm bẩn.",
+      "Rửa tay sau khi xử lý trứng sống/rác thực phẩm."
+    ],
+    "local_variation": "Nhãn model gộp egg và eggshell; cần kiểm tra trực quan để biết vật thể cụ thể.",
+    "keywords": [
+      "trứng",
+      "vỏ trứng",
+      "egg",
+      "eggshell"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Cho vào thùng rác thực phẩm nếu chương trình địa phương nhận trứng và vỏ trứng. Nếu địa phương không nhận rác hữu cơ hỗn hợp, theo hướng dẫn rác còn lại."
+  },
+  "foodContainer_awss": {
+    "name": "Hộp đựng thực phẩm (chưa xác định vật liệu)",
+    "english_name": "Food container",
+    "group_name": "Cần kiểm tra",
+    "what_it_is": "Model phát hiện hình dạng hộp đựng thực phẩm nhưng nhãn không chỉ rõ hộp làm bằng nhựa, kim loại, giấy ghép lớp hay vật liệu khác.",
+    "common_materials": "Có thể là nhựa, giấy tráng phủ, kim loại hoặc vật liệu nhiều lớp.",
+    "why_group": "Không thể quyết định thùng rác chỉ từ nhãn foodContainer. Cần kiểm tra ký hiệu vật liệu, lớp phủ và quy định của cơ sở thu gom.",
+    "preparation_steps": [
+      "Lấy hết thức ăn thừa.",
+      "Kiểm tra ký hiệu nhựa hoặc thông tin vật liệu in trên hộp.",
+      "Tráng sơ nếu được phép và để ráo; không cần rửa quá mức."
+    ],
+    "disposal_steps": [
+      "Hộp nhựa sạch: chỉ đưa vào tái chế nếu loại nhựa được tiếp nhận.",
+      "Hộp giấy ghép lớp hoặc vật liệu nhiều lớp: kiểm tra điểm thu gom chuyên biệt.",
+      "Hộp bẩn nặng/không thể làm sạch: xử lý theo hướng dẫn rác còn lại."
+    ],
+    "reuse_options": [
+      "Hộp còn bền có thể tái sử dụng nếu nhà sản xuất cho phép và hộp an toàn cho mục đích đó."
+    ],
+    "safety_notes": [
+      "Không tái sử dụng hộp dùng một lần đã biến dạng hoặc không rõ khả năng tiếp xúc thực phẩm.",
+      "Không trộn hộp dính hóa chất vào rác bao bì thực phẩm."
+    ],
+    "local_variation": "Nhãn detector không mã hóa vật liệu; cần người dùng xác nhận trước khi đưa ra khuyến nghị cuối cùng.",
+    "keywords": [
+      "hộp đựng thức ăn",
+      "hộp thực phẩm",
+      "food container",
+      "takeaway box"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Hộp nhựa sạch: chỉ đưa vào tái chế nếu loại nhựa được tiếp nhận. Hộp giấy ghép lớp hoặc vật liệu nhiều lớp: kiểm tra điểm thu gom chuyên biệt. Hộp bẩn nặng/không thể làm sạch: xử lý theo hướng dẫn rác còn lại."
+  },
+  "juiceBox_awss": {
+    "name": "Hộp giấy đựng nước trái cây (carton nhiều lớp)",
+    "english_name": "Juice box / beverage carton",
+    "group_name": "Cần kiểm tra",
+    "what_it_is": "Hộp đồ uống dạng carton thường dùng cho nước trái cây hoặc sữa. Bề ngoài giống giấy nhưng cấu tạo thường có nhiều lớp để chống thấm.",
+    "common_materials": "Thường gồm giấy, lớp polymer và đôi khi có lớp nhôm mỏng tùy cấu trúc bao bì.",
+    "why_group": "Vì là bao bì nhiều lớp, không phải cơ sở tái chế giấy thông thường nào cũng tiếp nhận. Cần tìm điểm thu gom có xử lý hộp carton đồ uống.",
+    "preparation_steps": [
+      "Đổ hết phần đồ uống còn lại.",
+      "Tráng nhẹ nếu hướng dẫn thu gom yêu cầu, sau đó để ráo.",
+      "Gấp hoặc ép phẳng nếu quy định điểm thu gom cho phép."
+    ],
+    "disposal_steps": [
+      "Đưa đến chương trình thu gom hộp carton đồ uống chuyên biệt nếu có.",
+      "Nếu không có điểm tiếp nhận, làm theo hướng dẫn rác còn lại tại địa phương; không mặc định bỏ vào giấy văn phòng."
+    ],
+    "reuse_options": [
+      "Có thể tái sử dụng cho thủ công nếu sạch và khô; cần tránh lưu giữ thức ăn/đồ uống dư."
+    ],
+    "safety_notes": [
+      "Không đốt bao bì nhiều lớp.",
+      "Không dùng lại hộp bị mốc hoặc bẩn để đựng thực phẩm."
+    ],
+    "local_variation": "Mạng lưới thu gom hộp carton đồ uống chưa phổ biến đồng đều; xác nhận trước khi phân loại.",
+    "keywords": [
+      "hộp nước trái cây",
+      "hộp sữa",
+      "tetra pak",
+      "juice box",
+      "carton"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Đưa đến chương trình thu gom hộp carton đồ uống chuyên biệt nếu có. Nếu không có điểm tiếp nhận, làm theo hướng dẫn rác còn lại tại địa phương; không mặc định bỏ vào giấy văn phòng."
+  },
+  "leaf_awss": {
+    "name": "Lá cây",
+    "english_name": "Leaf",
+    "group_name": "Rác hữu cơ",
+    "what_it_is": "Lá cây rụng hoặc lá thực vật là chất thải xanh có nguồn gốc thực vật khi bị thu gom bỏ đi.",
+    "common_materials": "Cellulose, lignin, nước và các hợp chất thực vật tự nhiên.",
+    "why_group": "Lá cây thường có thể phân hủy sinh học và phù hợp với thu gom rác xanh hoặc compost nếu không bị lẫn rác khác.",
+    "preparation_steps": [
+      "Tách lá khỏi túi nhựa, dây buộc hoặc rác lẫn.",
+      "Để ráo nếu lá quá ướt và chương trình thu gom yêu cầu."
+    ],
+    "disposal_steps": [
+      "Đưa vào điểm thu gom rác xanh hoặc đống compost được quản lý.",
+      "Không đốt lá ngoài trời; xử lý theo hướng dẫn địa phương."
+    ],
+    "reuse_options": [
+      "Có thể ủ thành compost hoặc lớp phủ hữu cơ trong hệ thống phù hợp."
+    ],
+    "safety_notes": [
+      "Kiểm tra xem lá có dính hóa chất làm vườn hoặc chất bẩn bất thường không.",
+      "Không đốt lá vì khói và nguy cơ cháy."
+    ],
+    "local_variation": "Một số nơi có thu gom riêng lá cây và cành nhỏ; nơi khác yêu cầu đóng bao theo ngày thu gom.",
+    "keywords": [
+      "lá cây",
+      "lá rụng",
+      "leaf",
+      "leaves"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Đưa vào điểm thu gom rác xanh hoặc đống compost được quản lý. Không đốt lá ngoài trời; xử lý theo hướng dẫn địa phương."
+  },
+  "nut_awss": {
+    "name": "Đai ốc kim loại",
+    "english_name": "Nut fastener",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Đây là đai ốc kim loại dùng vặn với bu lông, không phải hạt ăn được. Tài liệu nhãn nguồn xác định nut_awss là chi tiết cơ khí.",
+    "common_materials": "Thường bằng thép, inox hoặc hợp kim; model không phân tích thành phần kim loại.",
+    "why_group": "Chi tiết kim loại nhỏ có thể được thu hồi cùng phế liệu kim loại nếu điểm thu gom tiếp nhận.",
+    "preparation_steps": [
+      "Tách khỏi rác hữu cơ và vật liệu mềm.",
+      "Nếu còn sử dụng được, giữ riêng để tái sử dụng cùng bu lông tương thích."
+    ],
+    "disposal_steps": [
+      "Đưa đến điểm thu gom phế liệu kim loại.",
+      "Không bỏ vào thùng rác thực phẩm."
+    ],
+    "reuse_options": [
+      "Có thể tái sử dụng trong sửa chữa nếu đúng kích thước, ren và tình trạng còn tốt."
+    ],
+    "safety_notes": [
+      "Chi tiết nhỏ có thể gây nguy hiểm nếu trẻ nhỏ nuốt phải; cất giữ an toàn.",
+      "Không sử dụng chi tiết bị nứt hoặc hỏng trong kết cấu chịu lực."
+    ],
+    "local_variation": "Một số điểm thu gom yêu cầu gom kim loại nhỏ thành lô.",
+    "keywords": [
+      "đai ốc",
+      "ecu",
+      "nut",
+      "fastener"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Đưa đến điểm thu gom phế liệu kim loại. Không bỏ vào thùng rác thực phẩm."
+  },
+  "orange_awss": {
+    "name": "Quả cam",
+    "english_name": "Orange",
+    "group_name": "Rác hữu cơ",
+    "what_it_is": "Quả cam là thực phẩm có nguồn gốc thực vật. Nhãn model nhận dạng cam, không đánh giá chất lượng hay độ an toàn để ăn.",
+    "common_materials": "Mô quả, vỏ giàu chất xơ và tinh dầu tự nhiên.",
+    "why_group": "Khi bị thải bỏ, phần quả và vỏ cam thường phù hợp với dòng rác thực phẩm/compost nếu chương trình địa phương tiếp nhận.",
+    "preparation_steps": [
+      "Nếu cam còn dùng được, ưu tiên sử dụng làm thực phẩm.",
+      "Nếu bỏ đi, tách khỏi túi nhựa, lưới bọc hoặc nhãn dán."
+    ],
+    "disposal_steps": [
+      "Đưa phần quả/vỏ vào thùng hữu cơ hoặc compost phù hợp.",
+      "Tách bao bì nhựa ra riêng."
+    ],
+    "reuse_options": [
+      "Có thể tận dụng quả còn tốt làm thực phẩm; vỏ có thể compost nếu nơi thu gom cho phép."
+    ],
+    "safety_notes": [
+      "Không ăn cam đã mốc, ôi hoặc nhiễm bẩn.",
+      "Rửa tay sau khi xử lý rác thực phẩm."
+    ],
+    "local_variation": "Một số hệ thống compost có giới hạn lượng vỏ cam/quả có múi; kiểm tra quy định cơ sở.",
+    "keywords": [
+      "cam",
+      "vỏ cam",
+      "orange",
+      "citrus"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Đưa phần quả/vỏ vào thùng hữu cơ hoặc compost phù hợp. Tách bao bì nhựa ra riêng."
+  },
+  "paperBag_awss": {
+    "name": "Túi giấy",
+    "english_name": "Paper bag",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Túi giấy dùng để đựng hàng hóa hoặc thực phẩm. Model không đánh giá túi có lớp phủ chống nước hay cửa sổ nhựa hay không.",
+    "common_materials": "Giấy kraft hoặc giấy tái chế; một số túi có quai dây, lớp phủ hoặc cửa sổ nhựa.",
+    "why_group": "Giấy sạch và khô thường được tái chế. Túi dính dầu mỡ hoặc ghép vật liệu có thể không được cơ sở giấy nhận.",
+    "preparation_steps": [
+      "Lấy hết vật dụng bên trong.",
+      "Tháo quai/dây và cửa sổ nhựa nếu có thể tách dễ dàng.",
+      "Giữ túi khô, không dính thức ăn hoặc dầu mỡ."
+    ],
+    "disposal_steps": [
+      "Gấp phẳng và đưa vào thu gom giấy nếu điểm tiếp nhận cho phép.",
+      "Nếu bị ướt/bẩn hoặc nhiều lớp ghép không tách được, hỏi điểm thu gom hoặc xử lý theo hướng dẫn rác còn lại."
+    ],
+    "reuse_options": [
+      "Tái sử dụng túi còn nguyên vẹn cho việc mua sắm hoặc lưu trữ đồ khô."
+    ],
+    "safety_notes": [
+      "Không đốt giấy hoặc đựng vật nóng/chất nguy hiểm trong túi giấy."
+    ],
+    "local_variation": "Một số địa phương yêu cầu giấy khô, sạch và phân riêng khỏi hộp carton.",
+    "keywords": [
+      "túi giấy",
+      "paper bag",
+      "paper shopping bag"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Gấp phẳng và đưa vào thu gom giấy nếu điểm tiếp nhận cho phép. Nếu bị ướt/bẩn hoặc nhiều lớp ghép không tách được, hỏi điểm thu gom hoặc xử lý theo hướng dẫn rác còn lại."
+  },
+  "paperCup_awss": {
+    "name": "Cốc giấy",
+    "english_name": "Paper cup",
+    "group_name": "Cần kiểm tra",
+    "what_it_is": "Cốc giấy dùng một lần có thể có lớp phủ chống thấm. Nhãn model chỉ nhận dạng cốc giấy, không cho biết chính xác lớp phủ hay khả năng tái chế.",
+    "common_materials": "Giấy có thể được phủ polymer hoặc lớp chống thấm khác; nắp thường là vật liệu riêng.",
+    "why_group": "Cốc giấy có lớp phủ thường không thể tái chế cùng giấy văn phòng tại mọi cơ sở; cần nơi có quy trình tách/lọc lớp phủ.",
+    "preparation_steps": [
+      "Đổ hết chất lỏng.",
+      "Tách nắp, ống hút và lớp bọc nếu có.",
+      "Kiểm tra biểu tượng hoặc hướng dẫn của đơn vị thu gom."
+    ],
+    "disposal_steps": [
+      "Chỉ bỏ vào dòng cốc giấy chuyên biệt nếu điểm thu gom xác nhận tiếp nhận.",
+      "Nếu không có hệ thống đó, xử lý theo hướng dẫn rác còn lại tại địa phương."
+    ],
+    "reuse_options": [
+      "Ưu tiên dùng cốc tái sử dụng trong những lần sau; không tái sử dụng cốc dùng một lần đã mềm/hỏng."
+    ],
+    "safety_notes": [
+      "Không đổ chất lỏng nóng còn lại khi phân loại.",
+      "Tránh xếp cốc bẩn vào giấy sạch."
+    ],
+    "local_variation": "Khả năng tái chế cốc giấy khác nhau đáng kể giữa các địa phương.",
+    "keywords": [
+      "cốc giấy",
+      "paper cup",
+      "ly giấy"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Chỉ bỏ vào dòng cốc giấy chuyên biệt nếu điểm thu gom xác nhận tiếp nhận. Nếu không có hệ thống đó, xử lý theo hướng dẫn rác còn lại tại địa phương."
+  },
+  "paper_awss": {
+    "name": "Giấy rời",
+    "english_name": "Paper",
+    "group_name": "Rác tái chế",
+    "what_it_is": "Nhãn này chỉ giấy rời nói chung, không chỉ rõ giấy văn phòng, báo hay loại giấy có phủ. Cần quan sát độ sạch và lớp phủ.",
+    "common_materials": "Sợi cellulose từ bột giấy; giấy in có thể có mực, lớp phủ hoặc keo.",
+    "why_group": "Giấy sạch và khô có thể được tái chế; giấy dính thức ăn, dầu mỡ hoặc phủ nhiều lớp có thể không phù hợp.",
+    "preparation_steps": [
+      "Tách khỏi thực phẩm, nhựa và vật liệu khác.",
+      "Giữ giấy khô; loại bỏ kẹp kim loại lớn hoặc bìa nhựa nếu dễ tách."
+    ],
+    "disposal_steps": [
+      "Gom riêng và đưa tới điểm thu gom giấy.",
+      "Giấy ướt/bẩn nặng hoặc giấy ghép nhiều lớp cần theo hướng dẫn rác còn lại."
+    ],
+    "reuse_options": [
+      "Có thể dùng mặt còn trắng để ghi chú hoặc làm thủ công nếu sạch."
+    ],
+    "safety_notes": [
+      "Không đốt giấy để tiêu hủy.",
+      "Không tái chế giấy bị dính hóa chất hoặc chất bẩn không rõ."
+    ],
+    "local_variation": "Mỗi cơ sở có danh sách giấy được tiếp nhận khác nhau; giấy nhiệt, giấy phủ bóng và giấy dính dầu thường bị loại.",
+    "keywords": [
+      "giấy",
+      "paper",
+      "giấy vụn",
+      "giấy rời"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Gom riêng và đưa tới điểm thu gom giấy. Giấy ướt/bẩn nặng hoặc giấy ghép nhiều lớp cần theo hướng dẫn rác còn lại."
+  },
+  "plasticFoodPacket_awss": {
+    "name": "Bao bì thực phẩm bằng nhựa",
+    "english_name": "Plastic food packet",
+    "group_name": "Cần kiểm tra",
+    "what_it_is": "Bao bì mềm dùng để chứa hoặc bọc thực phẩm. Model phân loại gói thực phẩm bằng nhựa nhưng không nhận diện chính xác loại polymer hay số lớp.",
+    "common_materials": "Có thể là PE, PP hoặc màng ghép nhiều lớp; một số bao bì có lớp nhôm mỏng hoặc mực in.",
+    "why_group": "Bao bì sạch, khô và làm từ loại nhựa được tiếp nhận có thể tái chế tại một số chương trình. Màng ghép nhiều lớp thường khó xử lý hơn.",
+    "preparation_steps": [
+      "Đổ bỏ phần thức ăn còn sót.",
+      "Làm sạch sơ nếu dễ thực hiện và làm khô hoàn toàn.",
+      "Kiểm tra ký hiệu vật liệu và hướng dẫn nơi thu gom."
+    ],
+    "disposal_steps": [
+      "Đưa đến điểm thu gom bao bì mềm nếu họ tiếp nhận loại này.",
+      "Nếu bẩn nặng hoặc là màng ghép không có điểm nhận, bỏ theo hướng dẫn rác còn lại."
+    ],
+    "reuse_options": [
+      "Giảm dùng gói một lần; ưu tiên bao bì tái sử dụng khi phù hợp."
+    ],
+    "safety_notes": [
+      "Không đốt hoặc tự đun nóng bao bì.",
+      "Không tái sử dụng bao bì bẩn/hư hỏng để đựng thực phẩm."
+    ],
+    "local_variation": "Ranh giới giữa gói thực phẩm và túi nhựa chung không được mô tả chi tiết trong bộ nhãn nguồn; kết quả cần được xem là dự đoán.",
+    "keywords": [
+      "bao bì thực phẩm",
+      "gói bánh",
+      "gói snack",
+      "plastic food packet",
+      "wrapper"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Đưa đến điểm thu gom bao bì mềm nếu họ tiếp nhận loại này. Nếu bẩn nặng hoặc là màng ghép không có điểm nhận, bỏ theo hướng dẫn rác còn lại."
+  },
+  "plasticPacket_awss": {
+    "name": "Túi hoặc gói nhựa",
+    "english_name": "Plastic packet / bag",
+    "group_name": "Cần kiểm tra",
+    "what_it_is": "Nhãn này dùng cho gói nhựa hoặc túi nhựa nói chung. Tài liệu checkpoint ghi ranh giới với plasticFoodPacket không được mô tả đầy đủ, vì vậy không nên suy luận quá cụ thể.",
+    "common_materials": "Có thể là màng PE/PP hoặc màng ghép nhiều lớp; không thể xác định polymer chỉ từ nhãn này.",
+    "why_group": "Một số điểm thu gom nhận túi/màng nhựa sạch và khô; nhiều hệ thống tái chế thông thường không tiếp nhận loại này do dễ mắc vào máy móc.",
+    "preparation_steps": [
+      "Làm rỗng bao bì.",
+      "Nếu cần, lau/tráng sơ và làm khô hoàn toàn.",
+      "Kiểm tra xem có điểm thu gom túi/màng nhựa riêng hay không."
+    ],
+    "disposal_steps": [
+      "Đưa đến điểm thu gom bao bì mềm nếu được tiếp nhận.",
+      "Nếu bẩn nặng hoặc không có điểm thu gom phù hợp, xử lý theo quy định rác còn lại."
+    ],
+    "reuse_options": [
+      "Ưu tiên tái sử dụng túi còn sạch và nguyên vẹn; giảm sử dụng túi dùng một lần."
+    ],
+    "safety_notes": [
+      "Không đốt, chôn hoặc thả túi nhựa ra môi trường.",
+      "Giữ túi khỏi xa tầm tay trẻ nhỏ để tránh nguy cơ ngạt."
+    ],
+    "local_variation": "Khả năng tiếp nhận túi/màng nhựa khác nhau theo địa phương và từng điểm thu gom.",
+    "keywords": [
+      "túi nilon",
+      "túi nhựa",
+      "plastic bag",
+      "plastic packet",
+      "plastic wrapper"
+    ],
+    "source_label_note": "Tên nhãn được giữ theo checkpoint nguồn. Model nhận diện hình dạng/vật thể; một số nhãn không xác định chính xác chất liệu hoặc trạng thái đã qua sử dụng.",
+    "disposal_advice": "Đưa đến điểm thu gom bao bì mềm nếu được tiếp nhận. Nếu bẩn nặng hoặc không có điểm thu gom phù hợp, xử lý theo quy định rác còn lại."
+  }
+}
